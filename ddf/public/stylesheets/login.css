@@ -1,0 +1,115 @@
+.login-body {
+  width: 100%;
+  height: 100%;
+  background: url(../imgs/ecshop-bg.png) no-repeat center center;
+  background-size: cover;
+  position: relative; }
+
+.login-hd {
+  background: none;
+  height: 44px;
+  padding: 40px 0 40px 50px; }
+
+.center-wrap {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  left: 0;
+  width: 475px;
+  margin: auto auto;
+  transform: translateY(-50%); }
+  .center-wrap .login-main {
+    position: relative;
+    overflow: hidden;
+    padding-bottom: 42px;
+    height: 350px;
+    background: url(../imgs/icloud-bar.png) no-repeat 0 bottom;
+    margin-top: 50px; }
+    .center-wrap .login-main .login-show {
+      width: 302px;
+      position: absolute;
+      left: 16px;
+      z-index: 2;
+      background: rgba(255, 255, 255, 0.85);
+      color: #A1A1A1;
+      padding: 5px 70px 25px;
+      overflow: hidden;
+      box-shadow: 5px 2px 20px rgba(0, 0, 0, 0.3);
+      height: 322px; }
+      .center-wrap .login-main .login-show .controls {
+        position: relative;
+        height: 51px;
+        border: 1px solid #ddd;
+        border-top: none; }
+        .center-wrap .login-main .login-show .controls .icon {
+          font-size: 20px;
+          display: block;
+          width: 20px;
+          height: 20px;
+          position: absolute;
+          left: 15px;
+          top: 13px;
+          z-index: 10; }
+        .center-wrap .login-main .login-show .controls input {
+          border: none;
+          background-color: #fff;
+          color: #8a8a8a;
+          width: 100%;
+          line-height: 48px;
+          text-indent: 50px;
+          box-shadow: insert 30px 30px 0 30px #fff; }
+        .center-wrap .login-main .login-show .controls .btn {
+          cursor: pointer;
+          width: 100%;
+          margin-top: 20px;
+          display: block;
+          color: #fff;
+          font-size: 16px;
+          line-height: 51px;
+          text-align: center;
+          background-color: #fc7878;
+          border: 0;
+          border-radius: 4px;
+          letter-spacing: 4px;
+          text-indent: 0; }
+      .center-wrap .login-main .login-show .bside {
+        margin-top: 12px;
+        overflow: hidden;
+        height: auto;
+        font-size: 12px; }
+        .center-wrap .login-main .login-show .bside input[type="checkbox"] {
+          float: left;
+          width: 15px;
+          height: 15px;
+          margin: 2px 8px 0 0; }
+        .center-wrap .login-main .login-show .bside label {
+          color: #666;
+          float: left; }
+        .center-wrap .login-main .login-show .bside .link {
+          color: #41A5E1 !important; }
+        .center-wrap .login-main .login-show .bside .link-forget {
+          float: left;
+          margin-left: 25px; }
+        .center-wrap .login-main .login-show .bside a {
+          float: right;
+          display: inline-block;
+          text-align: right; }
+      .center-wrap .login-main .login-show .first {
+        border-radius: 5px 5px 0 0;
+        overflow: hidden;
+        border-top: 1px solid #ddd; }
+      .center-wrap .login-main .login-show .show-hd {
+        padding-bottom: 10px;
+        line-height: 1;
+        font-size: 18px;
+        margin: 18px 0;
+        text-align: center; }
+  .center-wrap .login-center {
+    width: 380px;
+    margin: 0 auto; }
+    .center-wrap .login-center .bd-logo img {
+      width: 248px;
+      height: 65px;
+      margin-left: 66px; }
+
+/*# sourceMappingURL=login.css.map */
