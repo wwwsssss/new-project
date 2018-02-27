@@ -2,12 +2,13 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8" />
-	<title>ECSHOP管理中心</title>
+	<title>ECSHOP管理中心</title>	
+	<script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
 	<link rel="stylesheet" href="/stylesheets/login.css" />
 	<link rel="stylesheet" href="/stylesheets/style.css" />
 </head>
 <body style="height:100%;padding:0">
-	<form class="login-body" action="" method="post">
+	<form id="frm" class="login-body" action="/admin" method="post">
 		<div class="login-hd">
 			<img src="/imgs/shopex.png" alt="" class="logo"/>
 		</div>
@@ -22,18 +23,18 @@
 					<h3 class="show-hd"></h3>
 					<div class="controls first">						
 						<i class="icon iconfont">&#xe697;</i>
-						<input type="text" name="username" placeholder="用户名"/>
+						<input type="text" name="username" id="username" placeholder="用户名"/>
 					</div>
 					<div class="controls second">						
 						<i class="icon iconfont">&#xe6e6;</i>
-						<input type="text" name="password" placeholder="密码"/>
+						<input type="text" name="password" id="psw" placeholder="密码"/>
 					</div>
 					<div class="controls third">						
 						<i class="icon iconfont">&#xe624;</i>
 						<input type="text" name="captcha" placeholder="验证码"/>
 					</div>
 					<div class="controls last">						
-						<input type="submit" class="btn" value="登录"/>
+						<input type="botton" onclick="submit()" class="btn" value="登录"/>
 					</div>
 					<div class="controls bside" style="border:none">
 						<input type="checkbox" value="1" name="remember" id="remember"/>
@@ -46,4 +47,9 @@
 		</div>		
 	</form>
 </body>
+<script>
+	function submit(){
+		document.getElementById("frm").submit();
+	}
+</script>
 </html>

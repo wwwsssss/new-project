@@ -1,0 +1,159 @@
+* {
+  margin: 0;
+  padding: 0; }
+
+body, html {
+  height: 100%; }
+
+#header-div {
+  background-color: #303030;
+  height: 76px; }
+  #header-div #logo-div {
+    margin-left: 30px;
+    margin-top: 20px;
+    width: 262px;
+    height: 45px;
+    float: left; }
+  #header-div #submenu-div {
+    text-align: center;
+    width: 1000px;
+    position: absolute;
+    right: 0;
+    height: 75px; }
+    #header-div #submenu-div li {
+      float: right;
+      width: 82px;
+      height: 82px; }
+      #header-div #submenu-div li a {
+        text-align: center;
+        height: 67px;
+        width: 82px;
+        padding-top: 8px;
+        display: block;
+        color: #fff; }
+        #header-div #submenu-div li a img {
+          margin: auto;
+          display: block;
+          height: 35px; }
+        #header-div #submenu-div li a span {
+          margin-top: 6px;
+          display: block; }
+
+#menu-div {
+  background: #575757;
+  height: 41px;
+  border-bottom: 1px solid #212121; }
+  #menu-div .clear {
+    clear: both;
+    float: none;
+    font-size: 0;
+    margin: 0;
+    padding: 0;
+    display: block; }
+  #menu-div ul .fix-spacel {
+    margin-left: 15px; }
+  #menu-div ul li {
+    float: left;
+    display: block;
+    height: 41px;
+    line-height: 41px;
+    position: relative; }
+    #menu-div ul li a {
+      float: left;
+      color: #fff;
+      padding: 0 12px;
+      display: block; }
+      #menu-div ul li a span {
+        margin-left: 10px; }
+      #menu-div ul li a .num {
+        width: 32px;
+        height: 16px;
+        background: url(/imgs/index-11_22.png) no-repeat scroll;
+        display: inline-block;
+        line-height: 16px;
+        vertical-align: middle;
+        text-align: center; }
+    #menu-div ul li .muneFG {
+      height: 13px;
+      width: 0;
+      border-right: 1px solid #656565;
+      margin-top: 15px;
+      border-left: 1px solid #303030;
+      display: inline-block; }
+
+#list-div {
+  display: inline-block;
+  width: 180px;
+  height: 652px;
+  overflow: auto;
+  background: #212121; }
+  #list-div #tabbar-div {
+    padding-left: 10px;
+    height: 34px;
+    background: #303030; }
+    #list-div #tabbar-div p .tab-front {
+      line-height: 33px;
+      font-weight: bold;
+      padding: 4px 15px 4px 18px;
+      cursor: pointer;
+      font-size: 14px;
+      color: #fff; }
+  #list-div #main-div {
+    color: #fff; }
+    #list-div #main-div #menu-ul .collapse {
+      text-indent: 40px;
+      display: block;
+      border-top: 1px solid #7f7f7f;
+      width: 100%;
+      line-height: 42px;
+      text-align: left; }
+      #list-div #main-div #menu-ul .collapse .menu-item {
+        font-size: 12px;
+        height: 30px;
+        line-height: 30px;
+        display: block;
+        font-weight: normal;
+        background: #575757; }
+        #list-div #main-div #menu-ul .collapse .menu-item a {
+          color: #d7d7d7; }
+    #list-div #main-div #menu-ul .ico_1 {
+      background: #575757 url(/imgs/menu_1.png) 9px 0 no-repeat; }
+    #list-div #main-div #menu-ul .ico_2 {
+      background: #575757 url(/imgs/menu_2.png) 9px 0 no-repeat; }
+    #list-div #main-div #menu-ul .ico_3 {
+      background: #575757 url(/imgs/menu_3.png) 9px 0 no-repeat; }
+    #list-div #main-div #menu-ul .ico_4 {
+      background: #575757 url(/imgs/menu_4.png) 9px 0 no-repeat; }
+    #list-div #main-div #menu-ul .ico_5 {
+      background: #575757 url(/imgs/menu_5.png) 9px 0 no-repeat; }
+    #list-div #main-div #menu-ul .ico_6 {
+      background: #575757 url(/imgs/menu_6.png) 9px 0 no-repeat; }
+    #list-div #main-div #menu-ul .ico_7 {
+      background: #575757 url(/imgs/menu_7.png) 9px 0 no-repeat; }
+    #list-div #main-div #menu-ul .ico_8 {
+      background: #575757 url(/imgs/menu_8.png) 9px 0 no-repeat; }
+    #list-div #main-div #menu-ul .ico_9 {
+      background: #575757 url(/imgs/menu_9.png) 9px 0 no-repeat; }
+    #list-div #main-div #menu-ul .ico_10 {
+      background: #575757 url(/imgs/menu_10.png) 9px 0 no-repeat; }
+    #list-div #main-div #menu-ul .ico_11 {
+      background: #575757 url(/imgs/menu_11.png) 9px 0 no-repeat; }
+    #list-div #main-div #menu-ul .ico_12 {
+      background: #575757 url(/imgs/menu_12.png) 9px 0 no-repeat; }
+    #list-div #main-div #menu-ul .ico_13 {
+      background: #575757 url(/imgs/menu_13.png) 9px 0 no-repeat; }
+    #list-div #main-div #menu-ul .ico_14 {
+      background: #575757 url(/imgs/menu_14.png) 9px 0 no-repeat; }
+    #list-div #main-div #menu-ul .ico_15 {
+      background: #575757 url(/imgs/menu_15.png) 9px 0 no-repeat; }
+
+#main {
+  float: right;
+  height: 500px;
+  width: 88%; }
+  #main iframe {
+    width: 100%;
+    height: 100%;
+    border: 0; }
+
+/*# sourceMappingURL=control.css.map */

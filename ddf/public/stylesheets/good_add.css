@@ -1,0 +1,26 @@
+h1 {
+  border-bottom: 1px solid #ccc;
+  color: #333;
+  font-weight: normal;
+  padding: 7px 10px;
+  margin: 0 0 10px 0;
+  overflow: hidden; }
+  h1 .action-span a {
+    float: right;
+    height: 26px;
+    line-height: 26px;
+    padding: 0 10px 0 23px;
+    background: #c43926 url("../imgs/icon_add02.gif") no-repeat 6px center;
+    border-radius: 3px;
+    color: #fff;
+    font-size: 13px;
+    text-align: center;
+    cursor: pointer; }
+  h1 .action-span1 {
+    color: #4c4c4c;
+    font-size: 18px;
+    font-weight: normal; }
+    h1 .action-span1 a {
+      font-size: 18px; }
+
+/*# sourceMappingURL=good_add.css.map */
