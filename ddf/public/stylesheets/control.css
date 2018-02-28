@@ -3,7 +3,19 @@
   padding: 0; }
 
 body, html {
-  height: 100%; }
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  overflow: hidden; }
+
+#header {
+  width: 100%;
+  height: 76px; }
+
+#nav {
+  width: 100%;
+  height: 41px; }
 
 #header-div {
   background-color: #303030;
@@ -84,7 +96,6 @@ body, html {
 #list-div {
   display: inline-block;
   width: 180px;
-  height: 652px;
   overflow: auto;
   background: #212121; }
   #list-div #tabbar-div {
@@ -148,12 +159,15 @@ body, html {
       background: #575757 url(/imgs/menu_15.png) 9px 0 no-repeat; }
 
 #main {
-  float: right;
-  height: 500px;
-  width: 88%; }
+  min-width: 88%; }
   #main iframe {
     width: 100%;
     height: 100%;
     border: 0; }
+
+#box {
+  overflow-x: hidden;
+  display: flex;
+  width: 100%; }
 
 /*# sourceMappingURL=control.css.map */

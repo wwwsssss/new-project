@@ -1,3 +1,9 @@
+body {
+  background: url(/imgs/body_bj.jpg);
+  background-color: #ccc;
+  padding: 10px;
+  min-width: 773px; }
+
 h1 {
   border-bottom: 1px solid #ccc;
   color: #333;
@@ -15,12 +21,122 @@ h1 {
     color: #fff;
     font-size: 13px;
     text-align: center;
-    cursor: pointer; }
+    cursor: pointer;
+    margin-top: 6px; }
   h1 .action-span1 {
     color: #4c4c4c;
     font-size: 18px;
     font-weight: normal; }
     h1 .action-span1 a {
       font-size: 18px; }
+  h1 .help_sub {
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 10px;
+    height: 26px; }
+
+.tab-div {
+  background: #f3f3f3;
+  border: 1px solid #d7d7d7;
+  margin: 0 0 10px 0;
+  padding: 1px; }
+  .tab-div #tabbar-div {
+    margin-top: -12px;
+    background: #efefef;
+    padding-left: 10px;
+    height: 39px; }
+    .tab-div #tabbar-div .tab-front {
+      background: #fefefe;
+      height: 39px;
+      line-height: 39px;
+      display: block;
+      float: left;
+      padding: 0 20px;
+      text-align: center;
+      font-weight: bold;
+      cursor: pointer; }
+    .tab-div #tabbar-div .tab-back {
+      background: #efefef;
+      height: 39px;
+      line-height: 39px;
+      display: block;
+      float: left;
+      padding: 0 20px;
+      text-align: center;
+      cursor: pointer;
+      font-size: 13px;
+      color: #787878; }
+
+#tabbody-div {
+  background: #fff; }
+  #tabbody-div img {
+    vertical-align: middle; }
+  #tabbody-div table {
+    display: table;
+    border-collapse: separate;
+    border-spacing: 2px;
+    border-color: grey; }
+    #tabbody-div table input[type="text"] {
+      margin: 5px 0; }
+    #tabbody-div table tbody {
+      display: table-row-group;
+      vertical-align: middle;
+      border-color: inherit; }
+      #tabbody-div table tbody tr {
+        display: table-row;
+        vertical-align: inherit;
+        border-color: inherit; }
+        #tabbody-div table tbody tr .require-field {
+          margin-left: 1em;
+          font: 12px;
+          color: #ff0000; }
+        #tabbody-div table tbody tr select {
+          margin: 5px 0; }
+        #tabbody-div table tbody tr .label {
+          text-align: right;
+          vertical-align: top;
+          font-weight: bold;
+          padding: 5px 1em;
+          width: 30%;
+          line-height: 30px; }
+        #tabbody-div table tbody tr .notice-span {
+          color: #666; }
+        #tabbody-div table tbody tr .special:link {
+          margin: 0 5px;
+          padding: 1px 5px;
+          border: 1px solid #9104d0;
+          border-right: 2px solid #278296;
+          border-bottom: 2px solid #278296;
+          background: #ddfff2;
+          text-decoration: none;
+          font-weight: 400; }
+        #tabbody-div table tbody tr .button {
+          padding: 5px 15px 5px;
+          margin: 2px;
+          border: none;
+          background: #ff3f3f;
+          color: #fff;
+          cursor: pointer;
+          border-radius: 3px; }
+
+.button-div {
+  text-align: center;
+  padding: 3px 0; }
+  .button-div .button {
+    padding: 5px 15px 5px;
+    margin: 2px;
+    border: none;
+    background: #ff3f3f;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 3px; }
+
+#footer {
+  background: #f3f3f3 url(/imgs/th_bg.gif) repeat-x;
+  border: 1px solid #ddd;
+  padding: 15px;
+  color: #9cacaf;
+  margin: 10px 0;
+  text-align: center; }
 
 /*# sourceMappingURL=good_add.css.map */
