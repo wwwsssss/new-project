@@ -39,343 +39,836 @@
 	 		</p>
 	 	</div>
 	 	<div id="tabbody-div">
-	 		<form action="" class="goods_add">
-	 			<table width="90%" align="center" class="goods_info">
-	 				<tbody>
-	 					<tr>
-	 						<td class="label">商品名称：</td>
-	 						<td>
-	 							<input type="text" name="goods_name" style="float:left;" size="30"/>
-		 						<div style="background-color:;float:left;margin:10px 0 0 5px;" id="font_color" onclick="ColorSelecter.Show(this);">
-		 							<img src="imgs/color_selecter.gif" style="margin-top:-10px;" alt="" />
-		 						</div>
-		 						<input type="hidden" id="goods_name_color" name="goods_name_color" />&nbsp;
-		 						<select name="goods_name_style" id="">
-		 							<option value="">字体样式</option>
-		 							<option value="">加粗</option>
-		 							<option value="">斜体</option>
-		 							<option value="">下划线</option>
-		 							<option value="">删除线</option>
-		 						</select>
-		 						<span class="require-field">*</span>
-	 						</td>
-	 					</tr>
-	 					<tr>
-	 						<td class="label">
-	 							<a href="">
-	 								<img src="imgs/notice.gif" width="16" height="16" border="0" alt="" />
-	 							</a>
-	 							商品货号：
-	 						</td>
-	 						<td>
-	 							<input type="text" name="goods_sn" size="20"/>
-	 							<span id="goods_sn_notice"></span>
-	 							<br />
-	 							<span class="notice-span" style="display:block">如果您不输入商品货号，系统将自动生成一个唯一的货号。</span>
-	 						</td>
-	 					</tr>
-	 					<tr>
-	 						<td class="label">商品分类：</td>
-	 						<td>
-	 							<select name="cat_id" id="">
-	 								<option value="0">请选择...</option>
-	 								<option value="">&ensp;&ensp;&ensp;&ensp;衬衫</option>
-	 								<option value="">&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;短袖衬衫</option>
-	 								<option value="">&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;长袖衬衫</option>
-	 								<option value="">&ensp;&ensp;&ensp;&ensp;裤子</option>
-	 								<option value="">&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;休闲短裤</option>
-	 								<option value="">&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;休闲长裤</option>
-	 								<option value="">&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;牛仔裤</option>
-	 								<option value="">&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;牛仔分裤</option>
-	 								<option value="">&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;连身裤</option>
-	 								<option value="">&ensp;&ensp;&ensp;&ensp;T恤/POLO</option>
-	 								<option value="">&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;短袖T恤</option>
-	 								<option value="">&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;长袖T恤</option>
-	 								<option value="">&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;POLO</option>
-	 								<option value="">&ensp;&ensp;&ensp;&ensp;裙</option>
-	 								<option value="">&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;连衣裙</option>
-	 								<option value="">&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;吊带裙</option>
-	 								<option value="">&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;半裙</option>
-	 								<option value="">&ensp;&ensp;&ensp;&ensp;衬衫</option>
-	 								<option value="">&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;分袖衬衫</option>
-	 								<option value="">&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;长袖衬衫</option>
-	 								<option value="">&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;短袖衬衫</option>
-	 								<option value="">&ensp;&ensp;&ensp;&ensp;针织衫</option>
-	 								<option value="">&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;套头衫</option>
-	 								<option value="">&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;开衫</option>
-	 								<option value="">&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;短袖针织衫</option>
-	 								<option value="">&ensp;&ensp;&ensp;&ensp;中老年服装</option>
-	 								<option value="">&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;裤装</option>
-	 								<option value="">&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;裙装</option>
-	 								<option value="">&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;T恤</option>
-	 								<option value="">&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;衬衫</option>
-	 								<option value="">&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;针织衫</option>
-	 								<option value="">&ensp;&ensp;&ensp;&ensp;外套</option>
-	 								<option value="">&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;风衣</option>
-	 								<option value="">&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;棉服</option>
-	 								<option value="">&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;卫衣</option>
-	 								<option value="">&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;皮衣</option>
-	 								<option value="">&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;西装</option>
-	 								<option value="">&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;夹克</option>
-	 								<option value="">&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;大衣</option>
-	 								<option value="">&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;羽绒服</option>	 								
-	 							</select>
-		 						<a href="" class="special">添加分类</a>
-		 						<span>
-		 							<input type="text" size="10" name="addedCategoryName"/>
-		 							<a href="" class="special">确定</a>
-		 							<a href="" class="special">分类管理</a>
-		 							<a href="" class="special"><<</a>	 							
-		 						</span>
-		 						<span class="require-field">*</span>
-	 						</td>
-	 					</tr>
-	 					<tr>
-	 						<td class="label">扩展分类：</td>
-	 						<td>
-	 							<input type="button" value="添加" class="button"/>
-	 						</td>
-	 					</tr>
-	 					<tr>
-	 						<td class="label">商品品牌：</td>
-	 						<td>
-	 							<select name="brand_id" id="">
-	 								<option value="0">请选择...</option>
-	 								<option value="">gr</option>
-	 								<option value="">空间大师</option>
-	 								<option value="">溢彩大师</option>
-	 								<option value="">EVENY</option>
-	 								<option value="">圣迪奥</option>
-	 								<option value="">韩都衣舍</option>
-	 								<option value="">betu百图</option>
-	 								<option value="">艾夫斯</option>
-	 								<option value="">太平鸟</option>
-	 								<option value="">O.SA</option>
-	 								<option value="">美好家</option>
-	 								<option value="">生活成品</option>
-	 								<option value="">kk</option>
-	 								<option value="">帮宝适</option>
-	 								<option value="">贝亲</option>
-	 								<option value="">雅培</option>
-	 								<option value="">好事达</option>
-	 								<option value="">千宏</option>	 												
-	 							</select>
-		 						<a href="" class="special">添加品牌</a>
-		 						<span>
-		 							<input type="text" size="10" name="addedCategoryName"/>
-		 							<a href="" class="special">确定</a>
-		 							<a href="" class="special">品牌管理</a>
-		 							<a href="" class="special"><<</a>	 							
-		 						</span>
-		 						<span class="require-field">*</span>
-	 						</td>
-	 					</tr>
-	 					<tr>
-	 						<td class="label">本店售价：</td>
-	 						<td>
-	 							<input type="text" name="shop_price" value="0" size="20"/>
-	 							<input type="button" value="按市场价计算"/>
-	 							<span class="require-field">*</span>
-	 						</td>
-	 					</tr>
-	 					<tr>
-	 						<td class="label">
-	 							<a href="">
-	 								<img src="imgs/notice.gif" width="16" height="16" border="0" alt="" />
-	 							</a>
-	 							会员价格：
-	 						</td>
-	 						<td>
-	 							注册用户
-	 							<input type="text" size="8" value="-1" class="input02"/>
-	 							代销用户
-	 							<input type="text" size="8" value="-1" class="input02"/>
-	 							vip
-	 							<input type="text" size="8" value="-1" class="input02"/>
-	 							<br />
-	 							<span class="notice-span" style="display:block;">会员价格为-1时表示会员价格按会员等级折扣率计算。你也可以为每一个等级指定一个固定价格</span>
-	 						</td>
-	 					</tr>
-	 					<tr>
-	 						<td class="label">
-	 							<a href="">
-	 								<img src="" alt="" width="16" height="16" border="0"/>
-	 							</a>
-	 							商品优惠价格：
-	 						</td>
-	 						<td>
-	 							<table width="100%" align="center">
-	 								<tbody>
-	 									<tr>
-	 										<td>
-	 											<a href="">[+]</a>
-	 											优惠数量
-	 											<input type="text" size="8" class="input02"/>优惠价格
-	 											<input type="text" size="8" class="input02"/>
-	 										</td>
-	 									</tr>
-	 								</tbody>
-	 							</table>
-	 							<span class="notice-span" style="display:block">购买数量达到优惠数量时享受优惠价格</span>
-	 						</td>
-	 					</tr>
-	 					<tr>
-	 						<td class="label">市场售价：</td>
-	 						<td>
-	 							<input type="text" value="0" size="20"/>
-	 							<input type="button" value="取整数"/>
-	 						</td>
-	 					</tr>
-	 					<tr>
-	 						<td class="label">虚拟销量：</td>
-	 						<td>
-	 							<input type="text" value="0" size="20"/>	 							
-	 						</td>
-	 					</tr>
-	 					<tr>
-	 						<td class="label">
-	 							<a href="">
-	 								<img src="imgs/notice.gif" width="16" height="16" border="0" alt="" />
-	 							</a>
-	 							赠送消费积分数：
-	 						</td>
-	 						<td>
-	 							<input type="text" name="goods_sn" size="20"  value="-1"/>
-	 							<span id="goods_sn_notice"></span>
-	 							<br />
-	 							<span class="notice-span" style="display:block">购买该商品是赠送消费积分数，-1表示按商品价格赠送</span>
-	 						</td>
-	 					</tr>
-	 					<tr>
-	 						<td class="label">
-	 							<a href="">
-	 								<img src="imgs/notice.gif" width="16" height="16" border="0" alt="" />
-	 							</a>
-	 							赠送等级积分数：
-	 						</td>
-	 						<td>
-	 							<input type="text" name="goods_sn" size="20"  value="-1"/>
-	 							<span id="goods_sn_notice"></span>
-	 							<br />
-	 							<span class="notice-span" style="display:block">购买该商品是赠送等级积分数，-1表示按商品价格赠送</span>
-	 						</td>
-	 					</tr>
-	 					<tr>
-	 						<td class="label">
-	 							<a href="">
-	 								<img src="imgs/notice.gif" width="16" height="16" border="0" alt="" />
-	 							</a>
-	 							积分购买金额：
-	 						</td>
-	 						<td>
-	 							<input type="text" name="goods_sn" size="20"  value="0"/>
-	 							<span id="goods_sn_notice"></span>
-	 							<br />
-	 							<span class="notice-span" style="display:block">(此处需填写金额)购买该商品是最多可以使用积分的金额</span>
-	 						</td>
-	 					</tr>
-	 					<tr>
-	 						<td class="label">
-	 							<label for="is_promote">
-	 								<input type="checkbox" id="is_promote" name="is_promote" value="1"/>促销价：
-	 							</label>
-	 						</td>
-	 						<td id="promote_price">
-	 							<input type="text" id="promote_1" name="promote_1" value="0" size="20" disabled/>
-	 						</td>	 						
-	 					</tr>
-	 					<tr>
-	 						<td class="label">促销日期：</td>
-	 						<td>
-	 							<input type="text" size="12" value="2018-02-28" readonly="readonly"/>
-	 							<input type="button" value="选择" class="button" disabled/>-
-	 							<input type="text" size="12" value="2018-03-27" readonly="readonly"/>
-	 							<input type="button" value="选择" class="选择" disabled/>
-	 						</td>
-	 					</tr>
-	 					<tr>
-	 						<td class="label">上传商品图片：</td>
-	 						<td>
-	 							<input type="file" name="goods_img" size="35"/>
-	 							<img src="imgs/no.gif" alt="" />
-	 							<br />
-	 							<input type="text" size="40" value="商品图片外部URL" style="color:#aaa"/>
-	 						</td>
-	 					</tr>
-	 					<tr>
-	 						<td class="label">上传商品缩略图：</td>
-	 						<td>
-	 							<input type="file" name="goods_thumb" size="35"/>
-	 							<img src="imgs/no.gif" alt="" />
-	 							<br />
-	 							<input type="text" size="40" value="商品缩略图外部URL" style="color:#aaa"/>
-	 							<br />
-	 							<label for="auto_thumb">
-	 								<input type="checkbox" id="auto_thumb" name="auto_thumb" checked="true" value="1"/>
-	 								自动生成商品缩略图
-	 							</label>
-	 						</td>
-	 					</tr>
-	 				</tbody>
-	 				
-	 			</table>
+	 		<form action="" id="frm">
+	 			<div>
+		 			<table width="90%" align="center"  class="goods_add" class="goods_info" style="display:table">
+		 				<tbody>
+		 					<tr>
+		 						<td class="label">商品名称：</td>
+		 						<td>
+		 							<input type="text" name="goods_name" style="float:left;" size="30"/>
+			 						<div style="background-color:;float:left;margin:10px 0 0 5px;" id="font_color" onclick="ColorSelecter.Show(this);">
+			 							<img src="imgs/color_selecter.gif" style="margin-top:-10px;" alt="" />
+			 						</div>
+			 						<input type="hidden" id="goods_name_color" name="goods_name_color" />&nbsp;
+			 						<select name="goods_name_style" id="">
+			 							<option value="">字体样式</option>
+			 							<option value="">加粗</option>
+			 							<option value="">斜体</option>
+			 							<option value="">下划线</option>
+			 							<option value="">删除线</option>
+			 						</select>
+			 						<span class="require-field">*</span>
+		 						</td>
+		 					</tr>
+		 					<tr>
+		 						<td class="label">
+		 							<a href="">
+		 								<img src="imgs/notice.gif" width="16" height="16" border="0" alt="" />
+		 							</a>
+		 							商品货号：
+		 						</td>
+		 						<td>
+		 							<input type="text" name="goods_sn" size="20"/>
+		 							<span id="goods_sn_notice"></span>
+		 							<br />
+		 							<span class="notice-span" style="display:block">如果您不输入商品货号，系统将自动生成一个唯一的货号。</span>
+		 						</td>
+		 					</tr>
+		 					<tr>
+		 						<td class="label">商品分类：</td>
+		 						<td>
+		 							<select name="cat_id" id="">
+		 								<option value="0">请选择...</option>
+		 								<option value="">&ensp;&ensp;&ensp;&ensp;衬衫</option>
+		 								<option value="">&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;短袖衬衫</option>
+		 								<option value="">&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;长袖衬衫</option>
+		 								<option value="">&ensp;&ensp;&ensp;&ensp;裤子</option>
+		 								<option value="">&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;休闲短裤</option>
+		 								<option value="">&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;休闲长裤</option>
+		 								<option value="">&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;牛仔裤</option>
+		 								<option value="">&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;牛仔分裤</option>
+		 								<option value="">&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;连身裤</option>
+		 								<option value="">&ensp;&ensp;&ensp;&ensp;T恤/POLO</option>
+		 								<option value="">&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;短袖T恤</option>
+		 								<option value="">&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;长袖T恤</option>
+		 								<option value="">&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;POLO</option>
+		 								<option value="">&ensp;&ensp;&ensp;&ensp;裙</option>
+		 								<option value="">&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;连衣裙</option>
+		 								<option value="">&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;吊带裙</option>
+		 								<option value="">&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;半裙</option>
+		 								<option value="">&ensp;&ensp;&ensp;&ensp;衬衫</option>
+		 								<option value="">&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;分袖衬衫</option>
+		 								<option value="">&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;长袖衬衫</option>
+		 								<option value="">&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;短袖衬衫</option>
+		 								<option value="">&ensp;&ensp;&ensp;&ensp;针织衫</option>
+		 								<option value="">&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;套头衫</option>
+		 								<option value="">&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;开衫</option>
+		 								<option value="">&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;短袖针织衫</option>
+		 								<option value="">&ensp;&ensp;&ensp;&ensp;中老年服装</option>
+		 								<option value="">&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;裤装</option>
+		 								<option value="">&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;裙装</option>
+		 								<option value="">&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;T恤</option>
+		 								<option value="">&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;衬衫</option>
+		 								<option value="">&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;针织衫</option>
+		 								<option value="">&ensp;&ensp;&ensp;&ensp;外套</option>
+		 								<option value="">&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;风衣</option>
+		 								<option value="">&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;棉服</option>
+		 								<option value="">&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;卫衣</option>
+		 								<option value="">&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;皮衣</option>
+		 								<option value="">&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;西装</option>
+		 								<option value="">&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;夹克</option>
+		 								<option value="">&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;大衣</option>
+		 								<option value="">&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;羽绒服</option>	 								
+		 							</select>
+			 						<a href="" class="special">添加分类</a>
+			 						<span>
+			 							<input type="text" size="10" name="addedCategoryName"/>
+			 							<a href="" class="special">确定</a>
+			 							<a href="" class="special">分类管理</a>
+			 							<a href="" class="special"><<</a>	 							
+			 						</span>
+			 						<span class="require-field">*</span>
+		 						</td>
+		 					</tr>
+		 					<tr>
+		 						<td class="label">扩展分类：</td>
+		 						<td>
+		 							<input type="button" value="添加" class="button"/>
+		 						</td>
+		 					</tr>
+		 					<tr>
+		 						<td class="label">商品品牌：</td>
+		 						<td>
+		 							<select name="brand_id" id="">
+		 								<option value="0">请选择...</option>
+		 								<option value="">gr</option>
+		 								<option value="">空间大师</option>
+		 								<option value="">溢彩大师</option>
+		 								<option value="">EVENY</option>
+		 								<option value="">圣迪奥</option>
+		 								<option value="">韩都衣舍</option>
+		 								<option value="">betu百图</option>
+		 								<option value="">艾夫斯</option>
+		 								<option value="">太平鸟</option>
+		 								<option value="">O.SA</option>
+		 								<option value="">美好家</option>
+		 								<option value="">生活成品</option>
+		 								<option value="">kk</option>
+		 								<option value="">帮宝适</option>
+		 								<option value="">贝亲</option>
+		 								<option value="">雅培</option>
+		 								<option value="">好事达</option>
+		 								<option value="">千宏</option>	 												
+		 							</select>
+			 						<a href="" class="special">添加品牌</a>
+			 						<span>
+			 							<input type="text" size="10" name="addedCategoryName"/>
+			 							<a href="" class="special">确定</a>
+			 							<a href="" class="special">品牌管理</a>
+			 							<a href="" class="special"><<</a>	 							
+			 						</span>
+			 						<span class="require-field">*</span>
+		 						</td>
+		 					</tr>
+		 					<tr>
+		 						<td class="label">本店售价：</td>
+		 						<td>
+		 							<input type="text" name="shop_price" value="0" size="20"/>
+		 							<input type="button" value="按市场价计算"/>
+		 							<span class="require-field">*</span>
+		 						</td>
+		 					</tr>
+		 					<tr>
+		 						<td class="label">
+		 							<a href="">
+		 								<img src="imgs/notice.gif" width="16" height="16" border="0" alt="" />
+		 							</a>
+		 							会员价格：
+		 						</td>
+		 						<td>
+		 							注册用户
+		 							<input type="text" size="8" value="-1" class="input02"/>
+		 							代销用户
+		 							<input type="text" size="8" value="-1" class="input02"/>
+		 							vip
+		 							<input type="text" size="8" value="-1" class="input02"/>
+		 							<br />
+		 							<span class="notice-span" style="display:block;">会员价格为-1时表示会员价格按会员等级折扣率计算。你也可以为每一个等级指定一个固定价格</span>
+		 						</td>
+		 					</tr>
+		 					<tr>
+		 						<td class="label">
+		 							<a href="">
+		 								<img src="" alt="" width="16" height="16" border="0"/>
+		 							</a>
+		 							商品优惠价格：
+		 						</td>
+		 						<td>
+		 							<table width="100%" align="center">
+		 								<tbody>
+		 									<tr>
+		 										<td>
+		 											<a href="">[+]</a>
+		 											优惠数量
+		 											<input type="text" size="8" class="input02"/>优惠价格
+		 											<input type="text" size="8" class="input02"/>
+		 										</td>
+		 									</tr>
+		 								</tbody>
+		 							</table>
+		 							<span class="notice-span" style="display:block">购买数量达到优惠数量时享受优惠价格</span>
+		 						</td>
+		 					</tr>
+		 					<tr>
+		 						<td class="label">市场售价：</td>
+		 						<td>
+		 							<input type="text" value="0" size="20"/>
+		 							<input type="button" value="取整数"/>
+		 						</td>
+		 					</tr>
+		 					<tr>
+		 						<td class="label">虚拟销量：</td>
+		 						<td>
+		 							<input type="text" value="0" size="20"/>	 							
+		 						</td>
+		 					</tr>
+		 					<tr>
+		 						<td class="label">
+		 							<a href="">
+		 								<img src="imgs/notice.gif" width="16" height="16" border="0" alt="" />
+		 							</a>
+		 							赠送消费积分数：
+		 						</td>
+		 						<td>
+		 							<input type="text" name="goods_sn" size="20"  value="-1"/>
+		 							<span id="goods_sn_notice"></span>
+		 							<br />
+		 							<span class="notice-span" style="display:block">购买该商品是赠送消费积分数，-1表示按商品价格赠送</span>
+		 						</td>
+		 					</tr>
+		 					<tr>
+		 						<td class="label">
+		 							<a href="">
+		 								<img src="imgs/notice.gif" width="16" height="16" border="0" alt="" />
+		 							</a>
+		 							赠送等级积分数：
+		 						</td>
+		 						<td>
+		 							<input type="text" name="goods_sn" size="20"  value="-1"/>
+		 							<span id="goods_sn_notice"></span>
+		 							<br />
+		 							<span class="notice-span" style="display:block">购买该商品是赠送等级积分数，-1表示按商品价格赠送</span>
+		 						</td>
+		 					</tr>
+		 					<tr>
+		 						<td class="label">
+		 							<a href="">
+		 								<img src="imgs/notice.gif" width="16" height="16" border="0" alt="" />
+		 							</a>
+		 							积分购买金额：
+		 						</td>
+		 						<td>
+		 							<input type="text" name="goods_sn" size="20"  value="0"/>
+		 							<span id="goods_sn_notice"></span>
+		 							<br />
+		 							<span class="notice-span" style="display:block">(此处需填写金额)购买该商品是最多可以使用积分的金额</span>
+		 						</td>
+		 					</tr>
+		 					<tr>
+		 						<td class="label">
+		 							<label for="is_promote">
+		 								<input type="checkbox" id="is_promote" name="is_promote" value="1"/>促销价：
+		 							</label>
+		 						</td>
+		 						<td id="promote_price">
+		 							<input type="text" id="promote_1" name="promote_1" value="0" size="20" disabled/>
+		 						</td>	 						
+		 					</tr>
+		 					<tr>
+		 						<td class="label">促销日期：</td>
+		 						<td>
+		 							<input type="text" size="12" value="2018-02-28" readonly="readonly"/>
+		 							<input type="button" value="选择" class="button" disabled/>-
+		 							<input type="text" size="12" value="2018-03-27" readonly="readonly"/>
+		 							<input type="button" value="选择" class="选择" disabled/>
+		 						</td>
+		 					</tr>
+		 					<tr>
+		 						<td class="label">上传商品图片：</td>
+		 						<td>
+		 							<input type="file" name="goods_img" size="35"/>
+		 							<img src="imgs/no.gif" alt="" />
+		 							<br />
+		 							<input type="text" size="40" value="商品图片外部URL" style="color:#aaa"/>
+		 						</td>
+		 					</tr>
+		 					<tr>
+		 						<td class="label">上传商品缩略图：</td>
+		 						<td>
+		 							<input type="file" name="goods_thumb" size="35"/>
+		 							<img src="imgs/no.gif" alt="" />
+		 							<br />
+		 							<input type="text" size="40" value="商品缩略图外部URL" style="color:#aaa"/>
+		 							<br />
+		 							<label for="auto_thumb">
+		 								<input type="checkbox" id="auto_thumb" name="auto_thumb" checked="true" value="1"/>
+		 								自动生成商品缩略图
+		 							</label>
+		 						</td>
+		 					</tr>
+		 				</tbody>	 				
+		 			</table>	 				 		
+		 			<table width="90%" align="center"  class="goods_add" class="goods_info" style="display:none">
+		 				<tbody>
+		 					<tr>
+		 						<td>
+		 							<div class="ke-container ke-container-default" style="width:100%">
+		 								<div class="ke-toolbar" unselectable="on">
+		 									<span class="ke-outline" title="HTML代码" unselectable="on">
+		 										<span class="ke-toolbar-icon ke-toolbar-icon-url ke-icon-source" unselectable="on"></span>
+		 									</span>
+		 									<span class="ke-inline-block ke-separator" ></span>
+		 									<span class="ke-outline" title="后退(Ctrl+Z)" unselectable="on">
+		 										<span class="ke-toolbar-icon ke-toolbar-icon-url ke-icon-undo" unselectable="on"></span>
+		 									</span>
+		 									<span class="ke-outline" title="前进(Ctrl+Y) unselectable="on">
+		 										<span class="ke-toolbar-icon ke-toolbar-icon-url ke-icon-redo" unselectable="on"></span>
+		 									</span>
+		 									<span class="ke-inline-block ke-separator" ></span>
+		 									<span class="ke-outline"  title="预览" unselectable="on">
+		 										<span class="ke-toolbar-icon ke-toolbar-icon-url ke-icon-preview" unselectable="on"></span>
+		 									</span>
+		 									<span class="ke-outline" title="打印(Ctrl+P)" unselectable="on">
+		 										<span class="ke-toolbar-icon ke-toolbar-icon-url ke-icon-print" unselectable="on"></span>
+		 									</span>
+		 									<span class="ke-outline" title="插入模板" unselectable="on">
+		 										<span class="ke-toolbar-icon ke-toolbar-icon-url ke-icon-template" unselectable="on"></span>
+		 									</span>
+		 									<span class="ke-outline" title="插入程序代码" unselectable="on">
+		 										<span class="ke-toolbar-icon ke-toolbar-icon-url ke-icon-code" unselectable="on"></span>
+		 									</span>
+		 									<span class="ke-outline" title="剪切(Ctrl+X)" unselectable="on">
+		 										<span class="ke-toolbar-icon ke-toolbar-icon-url ke-icon-cut" unselectable="on"></span>
+		 									</span>
+		 									<span class="ke-outline" title="复制(Ctrl+C)" unselectable="on">
+		 										<span class="ke-toolbar-icon ke-toolbar-icon-url ke-icon-copy" unselectable="on"></span>
+		 									</span>
+		 									<span class="ke-outline" title="粘贴(Ctrl+V)" unselectable="on">
+		 										<span class="ke-toolbar-icon ke-toolbar-icon-url ke-icon-paste" unselectable="on"></span>
+		 									</span>
+		 									<span class="ke-outline" title="粘贴为无格式文本" unselectable="on">
+		 										<span class="ke-toolbar-icon ke-toolbar-icon-url ke-icon-plainpaste" unselectable="on"></span>
+		 									</span>
+		 									<span class="ke-outline" title="从Word粘贴" unselectable="on">
+		 										<span class="ke-toolbar-icon ke-toolbar-icon-url ke-icon-wordpaste" unselectable="on"></span>
+		 									</span>
+		 									<span class="ke-inline-block ke-separator" ></span>
+		 									<span class="ke-outline" title="左对齐" unselectable="on">
+		 										<span class="ke-toolbar-icon ke-toolbar-icon-url ke-icon-justifyleft" unselectable="on"></span>
+		 									</span>
+		 									<span class="ke-outline" title="居中" unselectable="on">
+		 										<span class="ke-toolbar-icon ke-toolbar-icon-url ke-icon-justifycenter" unselectable="on"></span>
+		 									</span>
+		 									<span class="ke-outline" title="右对齐" unselectable="on">
+		 										<span class="ke-toolbar-icon ke-toolbar-icon-url ke-icon-justifyright" unselectable="on"></span>
+		 									</span>
+		 									<span class="ke-outline" title="两端对齐" unselectable="on">
+		 										<span class="ke-toolbar-icon ke-toolbar-icon-url ke-icon-justifyfull" unselectable="on"></span>
+		 									</span>
+		 									<span class="ke-outline" title="编号" unselectable="on">
+		 										<span class="ke-toolbar-icon ke-toolbar-icon-url ke-icon-insertorderedlist" unselectable="on"></span>
+		 									</span>
+		 									<span class="ke-outline" title="项目编号" unselectable="on">
+		 										<span class="ke-toolbar-icon ke-toolbar-icon-url ke-icon-insertunorderedlist" unselectable="on"></span>
+		 									</span>
+		 									<span class="ke-outline" title="增加缩进" unselectable="on">
+		 										<span class="ke-toolbar-icon ke-toolbar-icon-url ke-icon-indent" unselectable="on"></span>
+		 									</span>
+		 									<span class="ke-outline" title="减少缩进" unselectable="on">
+		 										<span class="ke-toolbar-icon ke-toolbar-icon-url ke-icon-outdent" unselectable="on"></span>
+		 									</span>
+		 									<span class="ke-outline" title="下标" unselectable="on">
+		 										<span class="ke-toolbar-icon ke-toolbar-icon-url ke-icon-subscript" unselectable="on"></span>
+		 									</span>
+		 									<span class="ke-outline" title="上标" unselectable="on">
+		 										<span class="ke-toolbar-icon ke-toolbar-icon-url ke-icon-superscript" unselectable="on"></span>
+		 									</span>
+		 									<span class="ke-outline" title="清理HTML代码" unselectable="on">
+		 										<span class="ke-toolbar-icon ke-toolbar-icon-url ke-icon-clearhtml" unselectable="on"></span>
+		 									</span>
+		 									<span class="ke-outline" title="一键排版" unselectable="on">
+		 										<span class="ke-toolbar-icon ke-toolbar-icon-url ke-icon-quickformat" unselectable="on"></span>
+		 									</span>
+		 									<span class="ke-outline" title="全选(Ctrl+A)" unselectable="on">
+		 										<span class="ke-toolbar-icon ke-toolbar-icon-url ke-icon-selectall" unselectable="on"></span>
+		 									</span>
+		 									<span class="ke-inline-block ke-separator" ></span>
+		 									<span class="ke-outline" title="全屏显示(Esc)" unselectable="on">
+		 										<span class="ke-toolbar-icon ke-toolbar-icon-url ke-icon-fullscreen" unselectable="on"></span>
+		 									</span>
+		 									<div class="ke-hr"></div>
+		 									<span class="ke-outline" title="段落" unselectable="on">
+		 										<span class="ke-toolbar-icon ke-toolbar-icon-url ke-icon-formatblock" unselectable="on"></span>
+		 									</span>
+		 									<span class="ke-outline" title="字体" unselectable="on">
+		 										<span class="ke-toolbar-icon ke-toolbar-icon-url ke-icon-fontname" unselectable="on"></span>
+		 									</span>
+		 									<span class="ke-outline" title="文字大小" unselectable="on">
+		 										<span class="ke-toolbar-icon ke-toolbar-icon-url ke-icon-fontsize" unselectable="on"></span>
+		 									</span>
+		 									<span class="ke-inline-block ke-separator" ></span>
+		 									<span class="ke-outline" title="文字颜色" unselectable="on">
+		 										<span class="ke-toolbar-icon ke-toolbar-icon-url ke-icon-forecolor" unselectable="on"></span>
+		 									</span>
+		 									<span class="ke-outline" title="文字背景" unselectable="on">
+		 										<span class="ke-toolbar-icon ke-toolbar-icon-url ke-icon-hilitecolor" unselectable="on"></span>
+		 									</span>
+		 									<span class="ke-outline" title="粗体(Ctrl+B)" unselectable="on">
+		 										<span class="ke-toolbar-icon ke-toolbar-icon-url ke-icon-bold" unselectable="on"></span>
+		 									</span>
+		 									<span class="ke-outline" title="下划线" unselectable="on">
+		 										<span class="ke-toolbar-icon ke-toolbar-icon-url ke-icon-underline" unselectable="on"></span>
+		 									</span>
+		 									<span class="ke-outline" title="删除线" unselectable="on">
+		 										<span class="ke-toolbar-icon ke-toolbar-icon-url ke-icon-strikethrough" unselectable="on"></span>
+		 									</span>
+		 									<span class="ke-outline" title="行距" unselectable="on">
+		 										<span class="ke-toolbar-icon ke-toolbar-icon-url ke-icon-lineheight" unselectable="on"></span>
+		 									</span>
+		 									<span class="ke-outline" title="删除格式" unselectable="on">
+		 										<span class="ke-toolbar-icon ke-toolbar-icon-url ke-icon-removeformat" unselectable="on"></span>
+		 									</span>
+		 									<span class="ke-inline-block ke-separator" ></span>
+		 									<span class="ke-outline" title="图片" unselectable="on">
+		 										<span class="ke-toolbar-icon ke-toolbar-icon-url ke-icon-image" unselectable="on"></span>
+		 									</span>
+		 									<span class="ke-outline" title="批量图片上传" unselectable="on">
+		 										<span class="ke-toolbar-icon ke-toolbar-icon-url ke-icon-multiimage" unselectable="on"></span>
+		 									</span>
+		 									<span class="ke-outline" title="Flash" unselectable="on">
+		 										<span class="ke-toolbar-icon ke-toolbar-icon-url ke-icon-flash" unselectable="on"></span>
+		 									</span>
+		 									<span class="ke-outline" title="视音频" unselectable="on">
+		 										<span class="ke-toolbar-icon ke-toolbar-icon-url ke-icon-media" unselectable="on"></span>
+		 									</span>
+		 									<span class="ke-outline" title="插入文件" unselectable="on">
+		 										<span class="ke-toolbar-icon ke-toolbar-icon-url ke-icon-insertfile" unselectable="on"></span>
+		 									</span>
+		 									<span class="ke-outline" title="表格" unselectable="on">
+		 										<span class="ke-toolbar-icon ke-toolbar-icon-url ke-icon-table" unselectable="on"></span>
+		 									</span>
+		 									<span class="ke-outline" title="插入横线" unselectable="on">
+		 										<span class="ke-toolbar-icon ke-toolbar-icon-url ke-icon-hr" unselectable="on"></span>
+		 									</span>
+		 									<span class="ke-outline" title="插入表情" unselectable="on">
+		 										<span class="ke-toolbar-icon ke-toolbar-icon-url ke-icon-emoticons" unselectable="on"></span>
+		 									</span>
+		 									<span class="ke-outline" title="百度地图" unselectable="on">
+		 										<span class="ke-toolbar-icon ke-toolbar-icon-url ke-icon-baidumap" unselectable="on"></span>
+		 									</span>
+		 									<span class="ke-outline" title="插入分页符" unselectable="on">
+		 										<span class="ke-toolbar-icon ke-toolbar-icon-url ke-icon-pagebreak" unselectable="on"></span>
+		 									</span>
+		 									<span class="ke-outline" title="锚点" unselectable="on">
+		 										<span class="ke-toolbar-icon ke-toolbar-icon-url ke-icon-anchor" unselectable="on"></span>
+		 									</span>
+		 									<span class="ke-outline" title="超级链接" unselectable="on">
+		 										<span class="ke-toolbar-icon ke-toolbar-icon-url ke-icon-link" unselectable="on"></span>
+		 									</span>
+		 									<span class="ke-outline" title="取消超级链接" unselectable="on">
+		 										<span class="ke-toolbar-icon ke-toolbar-icon-url ke-icon-unlink" unselectable="on"></span>
+		 									</span>
+		 									<span class="ke-inline-block ke-separator" ></span>
+		 									<span class="ke-outline" title="关于" unselectable="on">
+		 										<span class="ke-toolbar-icon ke-toolbar-icon-url ke-icon-about" unselectable="on"></span>
+		 									</span>
+		 								</div>
+		 								<div style="height:238px" class="ke-edit">
+		 									<iframe class="ke-edit-iframe" hidefocus="true" src="" frameborder="0" style="width:100%;height:238px;"></iframe>
+		 									<textarea name="" class="ke-edit-textarea" hidefocus="true" style="width:100%;height:238px;display:none;" ></textarea>
+		 								</div>
+		 								<div class="ke-statusbar">
+		 									<span class="ke-inline-block ke-statusbar-center-icon"></span>
+		 									<span class="ke-inline-block ke-statusbar-right-icon"></span>
+		 								</div>
+		 							</div>
+		 						</td>
+		 					</tr>
+		 				</tbody>
+		 			</table>
+		 			<table width="90%" align="center"  class="goods_add" class="goods_info" style="display:none">
+		 				<tbody>
+		 					<tr>
+		 						<td class="label">商品重量：</td>
+		 						<td>
+		 							<input type="text" size="20"/>
+		 							<select name="" id="">
+		 								<option value="1" selected>千克</option>
+		 								<option value="0.001">克</option>		 								
+		 							</select>
+		 						</td>
+		 					</tr>
+		 					<tr>
+		 						<td class="label">
+		 							<a href="">
+		 								<img src="imgs/notice.gif" width="16" height="16" border="0" alt="" />
+		 							</a>
+		 							商品库存数量：
+		 						</td>
+		 						<td>
+		 							<input type="text" value="1" size="20"/>
+		 							<br />
+		 							<span class="notice-span" style="display:block" >库存在商品为虚货或商品存在货品时为不可编辑状态，库存数值取决于其虚货数量或货品数量</span>
+		 						</td>			 						
+		 					</tr>
+		 					<tr>
+		 						<td class="label">库存警告数量：</td>
+		 						<td>
+		 							<input type="text" value="1" size="20"/>
+		 						</td>
+		 					</tr>
+		 					<tr>
+		 						<td class="label">加入推荐：</td>
+		 						<td>
+		 							<input type="checkbox" value="1"/>精品
+		 							<input type="checkbox" value="1"/>新品
+		 							<input type="checkbox" value="1"/>热销
+		 						</td>
+		 					</tr>
+		 					<tr>
+		 						<td class="label">上架：</td>
+		 						<td>
+		 							<input type="checkbox" value="1" checked/>
+		 							打勾时表示允许销售，否则不允许销售。
+		 						</td>
+		 					</tr>
+		 					<tr>
+		 						<td class="label">能作为普通商品销售：</td>
+		 						<td>
+		 							<input type="checkbox" value="1" checked/>
+		 							打勾表示能作为普通商品销售，否则只能作为配件或赠品销售。
+		 						</td>
+		 					</tr>
+		 					<tr>
+		 						<td class="label">是否为免运费商品：</td>
+		 						<td>
+		 							<input type="checkbox" value="1" checked/>
+		 							打勾表示此商品不会产生运费花销，否则按照正常运费计算。
+		 						</td>
+		 					</tr>
+		 					<tr>
+		 						<td class="label">商品关键词：</td>
+		 						<td>
+		 							<input type="text" size="40"/>
+		 							用空格分隔。
+		 						</td>
+		 					</tr>
+		 					<tr>
+		 						<td class="label">商品简单描述：</td>
+		 						<td>
+		 							<textarea name="" id="" cols="40" rows="3"></textarea>
+		 						</td>
+		 					</tr>
+		 					<tr>
+		 						<td class="label">
+		 							<a href="">
+		 								<img src="imgs/notice.gif" width="16" height="16" border="0" alt="" />
+		 							</a>
+		 							商家备注：
+		 						</td>
+		 						<td>
+		 							<textarea name="" id="" cols="40" rows="3"></textarea><br />
+		 							<span class="notice-span" style="display:block">仅供商家自己看的信息</span>
+		 						</td>			 						
+		 					</tr>
+		 				</tbody>
+		 			</table>
+		 			<table width="90%" align="center"  class="goods_add" class="goods_info" style="display:none">
+		 				<tbody>
+		 					<tr>
+		 						<td class="label">
+		 							<a href="">
+		 								<img src="imgs/notice.gif" width="16" height="16" border="0" alt="" />
+		 							</a>
+		 							商品类型：
+		 						</td>
+		 						<td>
+		 							<select name="" id="">
+		 								<option value="">请选择商品类型</option>
+		 								<option value="">书</option>
+		 								<option value="">音乐</option>
+		 								<option value="">电影</option>
+		 								<option value="">手机</option>
+		 								<option value="">笔记本电脑</option>
+		 								<option value="">数码相机</option>
+		 								<option value="">数码摄像机</option>
+		 								<option value="">化妆品</option>
+		 								<option value="">精品手机</option>
+		 								<option value="">服装</option>
+		 								<option value="">液晶电视</option>
+		 								<option value="">美妆</option>		 								
+		 							</select><br />
+		 							<span class="notice-span" style="display:block">请选择商品的所属类型，进而完善此商品的属性</span>
+		 						</td>
+		 					</tr>
+		 				</tbody>
+		 			</table>
+		 			<table width="90%" align="center"  class="goods_add" class="goods_info" style="display:none">
+		 				<tbody>
+		 					<tr>
+		 						<td>
+		 							<a href="">[+]</a>图片描述：
+		 							<input type="text" size="20"/>上传文件
+		 							<input type="file" />
+		 							<input type="text" size="40" value="或者输入外部图片链接地址" style="color:#aaa;"/>
+		 						</td>
+		 					</tr>
+		 				</tbody>
+		 			</table>
+		 			<table width="90%" align="center"  class="goods_add" class="goods_info" style="display:none">
+		 				<tbody>
+		 					<tr>
+		 						<td>
+		 							<img src="imgs/icon_search.gif" width="26" height="22" border="0" alt="" />
+		 							<select name="cat_id" id="">
+		 								<option value="0">请选择...</option>
+		 								<option value="">&ensp;&ensp;&ensp;&ensp;衬衫</option>
+		 								<option value="">&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;短袖衬衫</option>
+		 								<option value="">&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;长袖衬衫</option>
+		 								<option value="">&ensp;&ensp;&ensp;&ensp;裤子</option>
+		 								<option value="">&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;休闲短裤</option>
+		 								<option value="">&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;休闲长裤</option>
+		 								<option value="">&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;牛仔裤</option>
+		 								<option value="">&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;牛仔分裤</option>
+		 								<option value="">&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;连身裤</option>
+		 								<option value="">&ensp;&ensp;&ensp;&ensp;T恤/POLO</option>
+		 								<option value="">&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;短袖T恤</option>
+		 								<option value="">&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;长袖T恤</option>
+		 								<option value="">&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;POLO</option>
+		 								<option value="">&ensp;&ensp;&ensp;&ensp;裙</option>
+		 								<option value="">&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;连衣裙</option>
+		 								<option value="">&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;吊带裙</option>
+		 								<option value="">&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;半裙</option>
+		 								<option value="">&ensp;&ensp;&ensp;&ensp;衬衫</option>
+		 								<option value="">&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;分袖衬衫</option>
+		 								<option value="">&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;长袖衬衫</option>
+		 								<option value="">&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;短袖衬衫</option>
+		 								<option value="">&ensp;&ensp;&ensp;&ensp;针织衫</option>
+		 								<option value="">&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;套头衫</option>
+		 								<option value="">&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;开衫</option>
+		 								<option value="">&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;短袖针织衫</option>
+		 								<option value="">&ensp;&ensp;&ensp;&ensp;中老年服装</option>
+		 								<option value="">&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;裤装</option>
+		 								<option value="">&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;裙装</option>
+		 								<option value="">&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;T恤</option>
+		 								<option value="">&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;衬衫</option>
+		 								<option value="">&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;针织衫</option>
+		 								<option value="">&ensp;&ensp;&ensp;&ensp;外套</option>
+		 								<option value="">&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;风衣</option>
+		 								<option value="">&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;棉服</option>
+		 								<option value="">&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;卫衣</option>
+		 								<option value="">&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;皮衣</option>
+		 								<option value="">&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;西装</option>
+		 								<option value="">&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;夹克</option>
+		 								<option value="">&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;大衣</option>
+		 								<option value="">&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;羽绒服</option>	 								
+		 							</select>
+		 							<select name="" id="">
+		 								<option value="">请选择商品类型</option>
+		 								<option value="">书</option>
+		 								<option value="">音乐</option>
+		 								<option value="">电影</option>
+		 								<option value="">手机</option>
+		 								<option value="">笔记本电脑</option>
+		 								<option value="">数码相机</option>
+		 								<option value="">数码摄像机</option>
+		 								<option value="">化妆品</option>
+		 								<option value="">精品手机</option>
+		 								<option value="">服装</option>
+		 								<option value="">液晶电视</option>
+		 								<option value="">美妆</option>		 								
+		 							</select>
+		 							<input type="text" />
+		 							<input type="button" value="搜索" class="button"/>
+		 						</td>
+		 					</tr>
+		 					<tr>
+		 						<th>可选商品</th>
+		 						<th>操作</th>
+		 						<th>跟该商品关联的商品</th>
+		 					</tr>
+		 					<tr>
+		 						<td>
+		 							<select name="" size="20" style="width:100%" id=""></select>
+		 						</td>
+		 						<td align="center">
+		 							<p>
+		 								<input type="radio" value="1" checked/>单向关联
+		 								<br />
+		 								<input type="radio" value="0" />双向关联
+		 							</p>
+		 							<p>
+		 								<input type="button" value=">>" class="button"/>
+		 							</p>
+		 							<p>
+		 								<input type="button" value=">" class="button"/>
+		 							</p>
+		 							<p>
+		 								<input type="button" value="<" class="button"/>
+		 							</p>
+		 							<p>
+		 								<input type="button" value="<<" class="button"/>
+		 							</p>
+		 						</td>
+		 						<td width="42%">
+		 							<select name="" size="20" style="width:100%" id=""></select>
+		 						</td>
+		 					</tr>
+		 				</tbody>
+		 			</table>
+		 			<table width="90%" align="center"  class="goods_add" class="goods_info" style="display:none">
+		 				<tbody>
+		 					<tr>
+		 						<td>
+		 							<img src="imgs/icon_search.gif" width="26" height="22" border="0" alt="" />
+		 							<select name="cat_id" id="">
+		 								<option value="0">请选择...</option>
+		 								<option value="">&ensp;&ensp;&ensp;&ensp;衬衫</option>
+		 								<option value="">&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;短袖衬衫</option>
+		 								<option value="">&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;长袖衬衫</option>
+		 								<option value="">&ensp;&ensp;&ensp;&ensp;裤子</option>
+		 								<option value="">&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;休闲短裤</option>
+		 								<option value="">&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;休闲长裤</option>
+		 								<option value="">&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;牛仔裤</option>
+		 								<option value="">&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;牛仔分裤</option>
+		 								<option value="">&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;连身裤</option>
+		 								<option value="">&ensp;&ensp;&ensp;&ensp;T恤/POLO</option>
+		 								<option value="">&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;短袖T恤</option>
+		 								<option value="">&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;长袖T恤</option>
+		 								<option value="">&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;POLO</option>
+		 								<option value="">&ensp;&ensp;&ensp;&ensp;裙</option>
+		 								<option value="">&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;连衣裙</option>
+		 								<option value="">&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;吊带裙</option>
+		 								<option value="">&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;半裙</option>
+		 								<option value="">&ensp;&ensp;&ensp;&ensp;衬衫</option>
+		 								<option value="">&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;分袖衬衫</option>
+		 								<option value="">&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;长袖衬衫</option>
+		 								<option value="">&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;短袖衬衫</option>
+		 								<option value="">&ensp;&ensp;&ensp;&ensp;针织衫</option>
+		 								<option value="">&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;套头衫</option>
+		 								<option value="">&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;开衫</option>
+		 								<option value="">&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;短袖针织衫</option>
+		 								<option value="">&ensp;&ensp;&ensp;&ensp;中老年服装</option>
+		 								<option value="">&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;裤装</option>
+		 								<option value="">&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;裙装</option>
+		 								<option value="">&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;T恤</option>
+		 								<option value="">&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;衬衫</option>
+		 								<option value="">&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;针织衫</option>
+		 								<option value="">&ensp;&ensp;&ensp;&ensp;外套</option>
+		 								<option value="">&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;风衣</option>
+		 								<option value="">&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;棉服</option>
+		 								<option value="">&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;卫衣</option>
+		 								<option value="">&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;皮衣</option>
+		 								<option value="">&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;西装</option>
+		 								<option value="">&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;夹克</option>
+		 								<option value="">&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;大衣</option>
+		 								<option value="">&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;羽绒服</option>	 								
+		 							</select>
+		 							<select name="" id="">
+		 								<option value="">请选择商品类型</option>
+		 								<option value="">书</option>
+		 								<option value="">音乐</option>
+		 								<option value="">电影</option>
+		 								<option value="">手机</option>
+		 								<option value="">笔记本电脑</option>
+		 								<option value="">数码相机</option>
+		 								<option value="">数码摄像机</option>
+		 								<option value="">化妆品</option>
+		 								<option value="">精品手机</option>
+		 								<option value="">服装</option>
+		 								<option value="">液晶电视</option>
+		 								<option value="">美妆</option>		 								
+		 							</select>
+		 							<input type="text" />
+		 							<input type="button" value="搜索" class="button"/>
+		 						</td>
+		 					</tr>
+		 					<tr>
+		 						<th>可选商品</th>
+		 						<th>操作</th>
+		 						<th>该商品的配件</th>
+		 					</tr>
+		 					<tr>
+		 						<td>
+		 							<select name="" size="20" style="width:100%" id=""></select>
+		 						</td>
+		 						<td align="center">
+		 							<p>
+		 								价格
+		 								<br />
+		 								<input type="text" size="6" />
+		 							</p>
+		 							<p>
+		 								<input type="button" value=">" class="button"/>
+		 							</p>
+		 							<p>
+		 								<input type="button" value="<" class="button"/>
+		 							</p>		 							
+		 							<p>
+		 								<input type="button" value="<<" class="button"/>
+		 							</p>
+		 						</td>
+		 						<td width="42%">
+		 							<select name="" size="20" style="width:100%" id=""></select>
+		 						</td>
+		 					</tr>
+		 				</tbody>
+		 			</table>
+		 			<table width="90%" align="center"  class="goods_add" class="goods_info" style="display:none">
+		 				<tbody>
+		 					<tr>
+		 						<td>
+		 							<img src="imgs/icon_search.gif" width="26" height="22" border="0" alt="" />文章标题		 							
+		 							<input type="text" />
+		 							<input type="button" value="搜索" class="button"/>
+		 						</td>
+		 					</tr>
+		 					<tr>
+		 						<th>可选文章</th>
+		 						<th>操作</th>
+		 						<th>跟该商品关联的文章</th>
+		 					</tr>
+		 					<tr>
+		 						<td width="45%">
+		 							<select name="" size="20" style="width:100%" id=""></select>
+		 						</td>
+		 						<td align="center">		 							
+		 							<p>
+		 								<input type="button" value=">>" class="button"/>
+		 							</p>
+		 							<p>
+		 								<input type="button" value=">" class="button"/>
+		 							</p>
+		 							<p>
+		 								<input type="button" value="<" class="button"/>
+		 							</p>
+		 							<p>
+		 								<input type="button" value="<<" class="button"/>
+		 							</p>
+		 						</td>
+		 						<td width="45%">
+		 							<select name="" size="20" style="width:100%" id=""></select>
+		 						</td>
+		 					</tr>
+		 				</tbody>
+		 			</table>
+	 			</div>
 	 			<div class="button-div">
-	 				<input type="button" value="确定" class="button"/>
+	 				<input type="button" value="确定" class="button" id="submit" onclick="goods_add()"/>
 	 				<input type="reset" value="重置" class="button"/>
 	 			</div>
-	 		</form>
-	 		<form action="" class="goods_add" style="display:none">
-	 			<table width="90%" style="display:table">
-	 				<tbody>
-	 					<tr>
-	 						<td>
-	 							<div class="ke-container ke-container-default" style="width:100%">
-	 								<div class="ke-toolbar" unselectable="on">
-	 									<span class="ke-outline" unselectable="on">
-	 										<span class="ke-toolbar-icon ke-toolbar-icon-url ke-icon-source" unselectable="on"></span>
-	 									</span>
-	 									<span class="ke-inline-block ke-separator" ></span>
-	 									<span class="ke-outline" unselectable="on">
-	 										<span class="ke-toolbar-icon ke-toolbar-icon-url ke-icon-undo" unselectable="on"></span>
-	 									</span>
-	 									<span class="ke-outline" unselectable="on">
-	 										<span class="ke-toolbar-icon ke-toolbar-icon-url ke-icon-redo" unselectable="on"></span>
-	 									</span>
-	 									<span class="ke-inline-block ke-separator" ></span>
-	 									<span class="ke-outline" unselectable="on">
-	 										<span class="ke-toolbar-icon ke-toolbar-icon-url ke-icon-preview" unselectable="on"></span>
-	 									</span>
-	 									<span class="ke-outline" unselectable="on">
-	 										<span class="ke-toolbar-icon ke-toolbar-icon-url ke-icon-print" unselectable="on"></span>
-	 									</span>
-	 									<span class="ke-outline" unselectable="on">
-	 										<span class="ke-toolbar-icon ke-toolbar-icon-url ke-icon-template" unselectable="on"></span>
-	 									</span>
-	 								</div>
-	 							</div>
-	 						</td>
-	 					</tr>
-	 				</tbody>
-	 			</table>
-	 		</form>
-	 		<form action="" class="goods_add" style="display:none">
-	 			hello 3
-	 		</form>
-	 		<form action="" class="goods_add" style="display:none">
-	 			hello 4
-	 		</form>
-	 		<form action="" class="goods_add" style="display:none">
-	 			hello 5
-	 		</form>
-	 		<form action="" class="goods_add" style="display:none">
-	 			hello 6
-	 		</form>
-	 		<form action="" class="goods_add" style="display:none">
-	 			hello 7
-	 		</form>
-	 		<form action="" class="goods_add" style="display:none">
-	 			hello 8
-	 		</form>
+	 		</form>	 		
 	 	</div>	 	
 	 </div>
 	 <div id="footer">
@@ -391,9 +884,12 @@
 			   .siblings()
 			   .css({"background":"#efefef","font-weight":"bold","color":"#787878"})
 		$(".goods_add").eq($(this).index())
-					   .css("display","block")
+					   .css("display","table")
 					   .siblings()
 					   .css("display","none")
 	})
+	function goods_add(){
+		document.getElementById("frm").submit()
+	}
 </script>
 </html>

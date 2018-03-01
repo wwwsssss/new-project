@@ -14,6 +14,9 @@ router.get('/goods_add',function(req,res){
 router.get('/control',function(req,res){
 	res.render('control');
 })
+router.get('/goods_list',function(req,res){
+	res.render('goods_list');
+})
 router.post('/admin',function(req,res){	
 	var username = req.body.username;
 	var psw = req.body.password;	

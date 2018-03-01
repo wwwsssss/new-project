@@ -1,0 +1,49 @@
+img,select,input{
+    vertical-align:middle;
+}
+.form-div{
+    background:#f3f3f3 url(/imgs/th_bg.gif) repeat-x;
+    border:1px solid #ddd;
+    padding:5px;
+    color:#808080;
+    margin:0 0 10px 0;
+}
+.list-div table{
+    width:100%;
+    background:#ddd;
+    tr{
+        th{
+            line-height:39px;
+            background:#f3f3f3 url(/imgs/th_bg.gif) repeat-x;
+            white-space:nowrap;                        
+            font-weight:normal; 
+            a{
+              color:#111;  
+            }
+        }
+        td{
+            background-color:#fff;
+            padding:10px;
+            line-height:39px;
+        } 
+        td:last-of-type{
+            border-right:none;
+        }
+        .first-cell{
+            font-weight:bold;            
+        }
+    }
+       
+}
+#turn-page{
+    height:23px;
+    line-height:23px;
+    a{
+        color:#111;
+    }    
+}
+#page-link{
+    margin-left:1em;
+    padding-left:1em;
+    border-left:1px solid #999;
+}

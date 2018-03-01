@@ -119,6 +119,15 @@ h1 {
           cursor: pointer;
           border-radius: 3px; }
 
+.button {
+  padding: 5px 15px 5px;
+  margin: 2px;
+  border: none;
+  background: #ff3f3f;
+  color: #fff;
+  cursor: pointer;
+  border-radius: 3px; }
+
 .button-div {
   text-align: center;
   padding: 3px 0; }
@@ -138,5 +147,254 @@ h1 {
   color: #9cacaf;
   margin: 10px 0;
   text-align: center; }
+
+.ke-container {
+  border: 1px solid #CCC;
+  background: #fff;
+  overflow: hidden;
+  margin: 0;
+  padding: 0; }
+  .ke-container .ke-toolbar {
+    border-bottom: 1px solid #ccc;
+    background-color: #f0f0ee;
+    padding: 2px 5px;
+    text-align: left;
+    overflow: hidden;
+    zoom: 1; }
+    .ke-container .ke-toolbar .ke-separator {
+      height: 16px;
+      margin: 2px 3px;
+      border-left: 1px solid #a0a0a0;
+      border-right: 1px solid #fff;
+      border-top: 0;
+      border-bottom: 0;
+      width: 0;
+      font-size: 0;
+      line-height: 0;
+      overflow: hidden;
+      display: block;
+      float: left; }
+    .ke-container .ke-toolbar .ke-outline {
+      border: 1px solid #f0f0ee;
+      margin: 1px;
+      padding: 1px 2px;
+      font-size: 0;
+      line-height: 0;
+      overflow: hidden;
+      cursor: pointer;
+      display: block;
+      float: left; }
+      .ke-container .ke-toolbar .ke-outline .ke-toolbar-icon {
+        background-repeat: no-repeat;
+        font-size: 0;
+        line-height: 0;
+        overflow: hidden;
+        display: block; }
+      .ke-container .ke-toolbar .ke-outline .ke-toolbar-icon-url {
+        background-image: url(/imgs/default.png); }
+      .ke-container .ke-toolbar .ke-outline .ke-icon-source {
+        background-position: 0 0;
+        width: 16px;
+        height: 16px; }
+      .ke-container .ke-toolbar .ke-outline .ke-icon-undo {
+        background-position: 0px -48px;
+        width: 16px;
+        height: 16px; }
+      .ke-container .ke-toolbar .ke-outline .ke-icon-redo {
+        background-position: 0px -64px;
+        width: 16px;
+        height: 16px; }
+      .ke-container .ke-toolbar .ke-outline .ke-icon-preview {
+        background-position: 0px -16px;
+        width: 16px;
+        height: 16px; }
+      .ke-container .ke-toolbar .ke-outline .ke-icon-print {
+        background-position: 0px -32px;
+        width: 16px;
+        height: 16px; }
+      .ke-container .ke-toolbar .ke-outline .ke-icon-template {
+        background-position: 0px -1072px;
+        width: 16px;
+        height: 16px; }
+      .ke-container .ke-toolbar .ke-outline .ke-icon-code {
+        background-position: 0px -960px;
+        width: 16px;
+        height: 16px; }
+      .ke-container .ke-toolbar .ke-outline .ke-icon-cut {
+        background-position: 0px -80px;
+        width: 16px;
+        height: 16px; }
+      .ke-container .ke-toolbar .ke-outline .ke-icon-copy {
+        background-position: 0px -96px;
+        width: 16px;
+        height: 16px; }
+      .ke-container .ke-toolbar .ke-outline .ke-icon-paste {
+        background-position: 0px -112px;
+        width: 16px;
+        height: 16px; }
+      .ke-container .ke-toolbar .ke-outline .ke-icon-plainpaste {
+        background-position: 0px -704px;
+        width: 16px;
+        height: 16px; }
+      .ke-container .ke-toolbar .ke-outline .ke-icon-wordpaste {
+        background-position: 0px -720px;
+        width: 16px;
+        height: 16px; }
+      .ke-container .ke-toolbar .ke-outline .ke-icon-justifyleft {
+        background-position: 0px -144px;
+        width: 16px;
+        height: 16px; }
+      .ke-container .ke-toolbar .ke-outline .ke-icon-justifycenter {
+        background-position: 0px -160px;
+        width: 16px;
+        height: 16px; }
+      .ke-container .ke-toolbar .ke-outline .ke-icon-justifyright {
+        background-position: 0px -176px;
+        width: 16px;
+        height: 16px; }
+      .ke-container .ke-toolbar .ke-outline .ke-icon-justifyfull {
+        background-position: 0px -192px;
+        width: 16px;
+        height: 16px; }
+      .ke-container .ke-toolbar .ke-outline .ke-icon-insertorderedlist {
+        background-position: 0px -208px;
+        width: 16px;
+        height: 16px; }
+      .ke-container .ke-toolbar .ke-outline .ke-icon-insertunorderedlist {
+        background-position: 0px -224px;
+        width: 16px;
+        height: 16px; }
+      .ke-container .ke-toolbar .ke-outline .ke-icon-indent {
+        background-position: 0px -240px;
+        width: 16px;
+        height: 16px; }
+      .ke-container .ke-toolbar .ke-outline .ke-icon-outdent {
+        background-position: 0px -256px;
+        width: 16px;
+        height: 16px; }
+      .ke-container .ke-toolbar .ke-outline .ke-icon-subscript {
+        background-position: 0px -272px;
+        width: 16px;
+        height: 16px; }
+      .ke-container .ke-toolbar .ke-outline .ke-icon-superscript {
+        background-position: 0px -288px;
+        width: 16px;
+        height: 16px; }
+      .ke-container .ke-toolbar .ke-outline .ke-icon-clearhtml {
+        background-position: 0px -1008px;
+        width: 16px;
+        height: 16px; }
+      .ke-container .ke-toolbar .ke-outline .ke-icon-quickformat {
+        background-position: 0px -1056px;
+        width: 16px;
+        height: 16px; }
+      .ke-container .ke-toolbar .ke-outline .ke-icon-selectall {
+        background-position: 0px -128px;
+        width: 16px;
+        height: 16px; }
+      .ke-container .ke-toolbar .ke-outline .ke-icon-fullscreen {
+        background-position: 0px -656px;
+        width: 16px;
+        height: 16px; }
+      .ke-container .ke-toolbar .ke-outline .ke-icon-formatblock {
+        background-position: 0px -336px;
+        width: 16px;
+        height: 16px; }
+      .ke-container .ke-toolbar .ke-outline .ke-icon-fontname {
+        background-position: 0px -352px;
+        width: 16px;
+        height: 16px; }
+      .ke-container .ke-toolbar .ke-outline .ke-icon-fontsize {
+        background-position: 0px -368px;
+        width: 16px;
+        height: 16px; }
+      .ke-container .ke-toolbar .ke-outline .ke-icon-forecolor {
+        background-position: 0px -384px;
+        width: 16px;
+        height: 16px; }
+      .ke-container .ke-toolbar .ke-outline .ke-icon-hilitecolor {
+        background-position: 0px -400px;
+        width: 16px;
+        height: 16px; }
+      .ke-container .ke-toolbar .ke-outline .ke-icon-bold {
+        background-position: 0px -416px;
+        width: 16px;
+        height: 16px; }
+      .ke-container .ke-toolbar .ke-outline .ke-icon-italic {
+        background-position: 0px -432px;
+        width: 16px;
+        height: 16px; }
+      .ke-container .ke-toolbar .ke-outline .ke-icon-underline {
+        background-position: 0px -448px;
+        width: 16px;
+        height: 16px; }
+      .ke-container .ke-toolbar .ke-outline .ke-icon-strikethrough {
+        background-position: 0px -464px;
+        width: 16px;
+        height: 16px; }
+      .ke-container .ke-toolbar .ke-outline .ke-icon-lineheight {
+        background-position: 0px -992px;
+        width: 16px;
+        height: 16px; }
+      .ke-container .ke-toolbar .ke-outline .ke-icon-removeformat {
+        background-position: 0px -480px;
+        width: 16px;
+        height: 16px; }
+      .ke-container .ke-toolbar .ke-outline .ke-icon-image {
+        background-position: 0px -496px;
+        width: 16px;
+        height: 16px; }
+      .ke-container .ke-toolbar .ke-outline .ke-icon-multiimage {
+        background-position: 0px -1232px;
+        width: 16px;
+        height: 16px; }
+      .ke-container .ke-toolbar .ke-outline .ke-icon-flash {
+        background-position: 0px -512px;
+        width: 16px;
+        height: 16px; }
+      .ke-container .ke-toolbar .ke-outline .ke-icon-media {
+        background-position: 0px -528px;
+        width: 16px;
+        height: 16px; }
+      .ke-container .ke-toolbar .ke-outline .ke-icon-insertfile {
+        background-position: 0px -1040px;
+        width: 16px;
+        height: 16px; }
+      .ke-container .ke-toolbar .ke-outline .ke-icon-table {
+        background-position: 0px -784px;
+        width: 16px;
+        height: 16px; }
+      .ke-container .ke-toolbar .ke-outline .ke-icon-hr {
+        background-position: 0px -592px;
+        width: 16px;
+        height: 16px; }
+      .ke-container .ke-toolbar .ke-outline .ke-icon-emoticons {
+        background-position: 0px -608px;
+        width: 16px;
+        height: 16px; }
+      .ke-container .ke-toolbar .ke-outline .ke-icon-baidumap {
+        background-position: 0px -976px;
+        width: 16px;
+        height: 16px; }
+      .ke-container .ke-toolbar .ke-outline .ke-icon-pagebreak {
+        background-position: 0px -1024px;
+        width: 16px;
+        height: 16px; }
+      .ke-container .ke-toolbar .ke-outline .ke-icon-anchor {
+        background-position: 0px -1168px;
+        width: 16px;
+        height: 16px; }
+      .ke-container .ke-toolbar .ke-outline .ke-icon-link {
+        background-position: 0px -624px;
+        width: 16px;
+        height: 16px; }
+      .ke-container .ke-toolbar .ke-outline .ke-icon-unlink {
+        background-position: 0px -640px;
+        width: 16px;
+        height: 16px; }
+      .ke-container .ke-toolbar .ke-outline .ke-icon-about {
+        background-position: 0px -672px;
+        width: 16px;
+        height: 16px; }
 
 /*# sourceMappingURL=good_add.css.map */
