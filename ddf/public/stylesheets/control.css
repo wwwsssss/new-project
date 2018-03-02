@@ -166,8 +166,7 @@ body, html {
     border: 0; }
 
 #box {
-  overflow-x: hidden;
-  display: flex;
-  width: 100%; }
+  overflow: hidden;
+  display: flex; }
 
 /*# sourceMappingURL=control.css.map */

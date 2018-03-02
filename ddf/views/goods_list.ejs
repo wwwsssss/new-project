@@ -153,6 +153,7 @@
 						</th>
 						<th>操作</th>
 					</tr>
+					
 					<tr>
 						<td align="center">
 							<input type="checkbox" value="282"/>282
@@ -191,7 +192,7 @@
 							<a href="">
 								<img src="imgs/icon_view.gif" width="21" height="21" border="0" alt="" />
 							</a>
-							<a href="">
+							<a href="http://localhost:8080/goods_add">
 								<img src="imgs/icon_edit.gif" width="21" height="21" border="0" alt="" />
 							</a>
 							<a href="">
@@ -202,6 +203,57 @@
 							</a>
 						</td>
 					</tr>
+					<%for( var i = 0 ; i < list.length ; i ++){%>
+						<tr>
+							<td align="center">
+								<input type="checkbox" value="282"/>282
+							</td>
+							<td class="first-cell" align="center">
+								<span><%=list[i].goods_name%></span>
+							</td>
+							<td align="center">
+								<span><%=list[i].goods_sn%></span>
+							</td>
+							<td align="center">
+								<span><%=list[i].shop_price%></span>
+							</td>
+							<td align="center">
+								<img src="imgs/yes.gif" alt="" />
+							</td>
+							<td align="center">
+								<img src="imgs/yes.gif" alt="" />
+							</td>
+							<td align="center">
+								<img src="imgs/yes.gif" alt="" />
+							</td>
+							<td align="center">
+								<img src="imgs/yes.gif" alt="" />
+							</td>
+							<td align="center">
+								<span>100</span>
+							</td>
+							<td align="center">
+								<span><%=list[i].goods_number%></span>
+							</td>
+							<td align="center">
+								<span><%=list[i].vertual_sales%></span>
+							</td>
+							<td align="center">
+								<a href="">
+									<img src="imgs/icon_view.gif" width="21" height="21" border="0" alt="" />
+								</a>
+								<a href="http://localhost:8080/goods_add">
+									<img src="imgs/icon_edit.gif" width="21" height="21" border="0" alt="" />
+								</a>
+								<a href="">
+									<img src="imgs/icon_copy.gif" width="21" height="21" border="0" alt="" />
+								</a>
+								<a href="">
+									<img src="imgs/icon_trash.gif" width="21" height="21" border="0" alt="" />
+								</a>
+							</td>
+						</tr>
+					<%}%>
 				</tbody>
 			</table>
 			<table id="page-table">

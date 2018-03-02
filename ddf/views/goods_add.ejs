@@ -39,7 +39,7 @@
 	 		</p>
 	 	</div>
 	 	<div id="tabbody-div">
-	 		<form action="" id="frm">
+	 		<form action="goods_list"  method="post" id="frm" enctype="multipart/form-data">
 	 			<div>
 		 			<table width="90%" align="center"  class="goods_add" class="goods_info" style="display:table">
 		 				<tbody>
@@ -69,7 +69,7 @@
 		 							商品货号：
 		 						</td>
 		 						<td>
-		 							<input type="text" name="goods_sn" size="20"/>
+		 							<input type="text" name="goods_sn" size="20" name="goods-sn"/>
 		 							<span id="goods_sn_notice"></span>
 		 							<br />
 		 							<span class="notice-span" style="display:block">如果您不输入商品货号，系统将自动生成一个唯一的货号。</span>
@@ -230,7 +230,7 @@
 		 					<tr>
 		 						<td class="label">虚拟销量：</td>
 		 						<td>
-		 							<input type="text" value="0" size="20"/>	 							
+		 							<input type="text" value="0" size="20" name="vertual_sales"/>	 							
 		 						</td>
 		 					</tr>
 		 					<tr>
@@ -517,7 +517,7 @@
 		 							商品库存数量：
 		 						</td>
 		 						<td>
-		 							<input type="text" value="1" size="20"/>
+		 							<input type="text" value="1" size="20" name="goods_number"/>
 		 							<br />
 		 							<span class="notice-span" style="display:block" >库存在商品为虚货或商品存在货品时为不可编辑状态，库存数值取决于其虚货数量或货品数量</span>
 		 						</td>			 						
@@ -865,7 +865,7 @@
 		 			</table>
 	 			</div>
 	 			<div class="button-div">
-	 				<input type="button" value="确定" class="button" id="submit" onclick="goods_add()"/>
+	 				<input type="button" value="确定" class="button"  onclick="addGoods()"/>
 	 				<input type="reset" value="重置" class="button"/>
 	 			</div>
 	 		</form>	 		
@@ -888,8 +888,8 @@
 					   .siblings()
 					   .css("display","none")
 	})
-	function goods_add(){
-		document.getElementById("frm").submit()
+	function addGoods(){
+		document.getElementById("frm").submit();
 	}
 </script>
 </html>
