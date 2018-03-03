@@ -111,7 +111,7 @@
 			<input type="submit" value="搜索" class="button"/>
 		</form>
 	</div>
-	<form action="">
+	<form action="" id="from">
 		<div class="list-div">
 			<table cellpadding="3" cellspacing="1">
 				<tbody>
@@ -152,107 +152,59 @@
 							<a href="">虚拟销量</a>
 						</th>
 						<th>操作</th>
-					</tr>
-					
-					<tr>
-						<td align="center">
-							<input type="checkbox" value="282"/>282
-						</td>
-						<td class="first-cell" align="center">
-							<span>瓜子</span>
-						</td>
-						<td align="center">
-							<span>ECS000282</span>
-						</td>
-						<td align="center">
-							<span>2.00</span>
-						</td>
-						<td align="center">
-							<img src="imgs/yes.gif" alt="" />
-						</td>
-						<td align="center">
-							<img src="imgs/yes.gif" alt="" />
-						</td>
-						<td align="center">
-							<img src="imgs/yes.gif" alt="" />
-						</td>
-						<td align="center">
-							<img src="imgs/yes.gif" alt="" />
-						</td>
-						<td align="center">
-							<span>100</span>
-						</td>
-						<td align="center">
-							<span>1</span>
-						</td>
-						<td align="center">
-							<span>0</span>
-						</td>
-						<td align="center">
-							<a href="">
-								<img src="imgs/icon_view.gif" width="21" height="21" border="0" alt="" />
-							</a>
-							<a href="http://localhost:8080/goods_add">
-								<img src="imgs/icon_edit.gif" width="21" height="21" border="0" alt="" />
-							</a>
-							<a href="">
-								<img src="imgs/icon_copy.gif" width="21" height="21" border="0" alt="" />
-							</a>
-							<a href="">
-								<img src="imgs/icon_trash.gif" width="21" height="21" border="0" alt="" />
-							</a>
-						</td>
-					</tr>
-					<%for( var i = 0 ; i < list.length ; i ++){%>
-						<tr>
-							<td align="center">
-								<input type="checkbox" value="282"/>282
-							</td>
-							<td class="first-cell" align="center">
-								<span><%=list[i].goods_name%></span>
-							</td>
-							<td align="center">
-								<span><%=list[i].goods_sn%></span>
-							</td>
-							<td align="center">
-								<span><%=list[i].shop_price%></span>
-							</td>
-							<td align="center">
-								<img src="imgs/yes.gif" alt="" />
-							</td>
-							<td align="center">
-								<img src="imgs/yes.gif" alt="" />
-							</td>
-							<td align="center">
-								<img src="imgs/yes.gif" alt="" />
-							</td>
-							<td align="center">
-								<img src="imgs/yes.gif" alt="" />
-							</td>
-							<td align="center">
-								<span>100</span>
-							</td>
-							<td align="center">
-								<span><%=list[i].goods_number%></span>
-							</td>
-							<td align="center">
-								<span><%=list[i].vertual_sales%></span>
-							</td>
-							<td align="center">
-								<a href="">
-									<img src="imgs/icon_view.gif" width="21" height="21" border="0" alt="" />
-								</a>
-								<a href="http://localhost:8080/goods_add">
-									<img src="imgs/icon_edit.gif" width="21" height="21" border="0" alt="" />
-								</a>
-								<a href="">
-									<img src="imgs/icon_copy.gif" width="21" height="21" border="0" alt="" />
-								</a>
-								<a href="">
-									<img src="imgs/icon_trash.gif" width="21" height="21" border="0" alt="" />
-								</a>
-							</td>
-						</tr>
+					</tr>										
+					<%for( var i = (pageNo-1)*count ; i < pageNo*count ; i ++){%>
+						<%if(i<sum){%>
+							<tr>
+								<td align="center">
+									<input type="checkbox"  name="pro_num"/><%=list[i].pro_name%>
+								</td>
+								<td class="first-cell" align="center">
+									<span><%=list[i].goods_name%></span>
+								</td>
+								<td align="center">
+									<span><%=list[i].goods_sn%></span>
+								</td>
+								<td align="center">
+									<span><%=list[i].shop_price%></span>
+								</td>
+								<td align="center">
+									<img src="imgs/yes.gif" alt="" />
+								</td>
+								<td align="center">
+									<img src="imgs/yes.gif" alt="" />
+								</td>
+								<td align="center">
+									<img src="imgs/yes.gif" alt="" />
+								</td>
+								<td align="center">
+									<img src="imgs/yes.gif" alt="" />
+								</td>
+								<td align="center">
+									<span>100</span>
+								</td>
+								<td align="center">
+									<span><%=list[i].goods_number%></span>
+								</td>
+								<td align="center">
+									<span><%=list[i].vertual_sales%></span>
+								</td>
+								<td align="center">
+									<a href="">
+										<img src="imgs/icon_view.gif" width="21" height="21" border="0" alt="" />
+									</a>
+									<a href="http://localhost:8080/goods_add">
+										<img src="imgs/icon_edit.gif" width="21" height="21" border="0" alt="" />
+									</a>
+									<a href="">
+										<img src="imgs/icon_copy.gif" width="21" height="21" border="0" alt="" />
+									</a>
+									<a href="" onclick="del('<%=list[i]._id%>')">
+										<img src="imgs/icon_trash.gif"  width="21" height="21" border="0" alt="" />
+									</a>
+								</td>
+							</tr>
+						<%}%>
 					<%}%>
 				</tbody>
 			</table>
@@ -262,18 +214,22 @@
 						<td align="right" nowrap="true">
 							<div id="turn-page">
 								总计
-								<span>6</span>
+								<span><%=list.length %></span>
 								个记录分为
-								<span>1</span>
+								<span><%= Math.ceil(sum/count) %></span>
 								页当前第
-								<span>1</span>
+								<span><%= pageNo %></span>
 								页，每页
-								<input type="text" size="3" value="15"/>
+								<input type="text" size="3" value="<%= count %>" name="count" id="change"/>
 								<span id="page-link">
-									<a href="">第一页</a>
-									<a href="">上一页</a>
-									<a href="">下一页</a>
-									<a href="">最末页</a>
+									<a href="/list?pageNo=1&count=<%= count %>">第一页</a>
+									<%if(pageNo > 1 ){%>
+										<a href="/list?pageNo=<%= pageNo-1 %>&count=<%= count %>">上一页</a>
+									<%}%>									
+									<%if(pageNo<Math.ceil(sum/count)){%>	
+										<a href="/list?pageNo=<%= pageNo+1 %>&count=<%= count %>">下一页</a>
+									<%}%>
+									<a href="/list?pageNo=<%= Math.ceil(sum/count) %>&count=<%= count %>">最末页</a>
 								</span>
 								<select name="" id="">
 									<option value="">1</option>
@@ -308,4 +264,23 @@
             版权所有 © 2005-2018 上海商派软件有限公司，并保留所有权利。
 	 </div>
 </body>
+<script>
+	function del(gid){
+		$.ajax({
+			url : "/api/goods_del",
+			type : "get",
+			data : {
+				gid : gid
+			},
+			success : function(res){
+				console.log(res);
+				if(res.status == 1){					
+					location.reload(ture);
+				}else{
+					alert(res.message);
+				}
+			}
+		})
+	}
+</script>
 </html>
