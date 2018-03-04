@@ -174,7 +174,7 @@
 		 					<tr>
 		 						<td class="label">本店售价：</td>
 		 						<td>
-		 							<input type="text" name="shop_price" value="0" size="20"/>
+		 							<input type="text" name="shop_price" value="" size="20"/>
 		 							<input type="button" value="按市场价计算"/>
 		 							<span class="require-field">*</span>
 		 						</td>
@@ -517,7 +517,7 @@
 		 							商品库存数量：
 		 						</td>
 		 						<td>
-		 							<input type="text" value="1" size="20" name="goods_number"/>
+		 							<input type="text" value="" size="20" name="goods_number"/>
 		 							<br />
 		 							<span class="notice-span" style="display:block" >库存在商品为虚货或商品存在货品时为不可编辑状态，库存数值取决于其虚货数量或货品数量</span>
 		 						</td>			 						
@@ -531,29 +531,29 @@
 		 					<tr>
 		 						<td class="label">加入推荐：</td>
 		 						<td>
-		 							<input type="checkbox" value="1"/>精品
-		 							<input type="checkbox" value="1"/>新品
-		 							<input type="checkbox" value="1"/>热销
+		 							<input name="supreme_pro" type="checkbox" value="1" checked/>精品
+		 							<input name="new_pro" type="checkbox" value="1" checked/>新品
+		 							<input name="hot_pro" type="checkbox" value="1" checked/>热销
 		 						</td>
 		 					</tr>
 		 					<tr>
 		 						<td class="label">上架：</td>
 		 						<td>
-		 							<input type="checkbox" value="1" checked/>
+		 							<input name="grounding" type="checkbox" value="1" checked />
 		 							打勾时表示允许销售，否则不允许销售。
 		 						</td>
 		 					</tr>
 		 					<tr>
 		 						<td class="label">能作为普通商品销售：</td>
 		 						<td>
-		 							<input type="checkbox" value="1" checked/>
+		 							<input type="checkbox" value="" checked name="normal_pro"/>
 		 							打勾表示能作为普通商品销售，否则只能作为配件或赠品销售。
 		 						</td>
 		 					</tr>
 		 					<tr>
 		 						<td class="label">是否为免运费商品：</td>
 		 						<td>
-		 							<input type="checkbox" value="1" checked/>
+		 							<input type="checkbox" value="" checked name="free_crash"/>
 		 							打勾表示此商品不会产生运费花销，否则按照正常运费计算。
 		 						</td>
 		 					</tr>
@@ -631,7 +631,7 @@
 		 					<tr>
 		 						<td>
 		 							<img src="imgs/icon_search.gif" width="26" height="22" border="0" alt="" />
-		 							<select name="cat_id" id="">
+		 							<select name="cat_id">
 		 								<option value="0">请选择...</option>
 		 								<option value="">&ensp;&ensp;&ensp;&ensp;衬衫</option>
 		 								<option value="">&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;短袖衬衫</option>

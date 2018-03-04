@@ -5,8 +5,11 @@ var Goods = new Schema({
     shop_price      : String,
     goods_number      : String,
     vertual_sales      : String,
-    goods_sn      : String,
-    count : String,
+    goods_sn      : String,    
+    supreme_pro : String,
+    new_pro : String,
+    grounding : String,
+    hot_pro : String,
     pro_num : String,
     create_date      : { type: Date, default: Date.now }
 });

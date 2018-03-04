@@ -1,22 +1,18 @@
 body {
 	margin:0;  
-  height:100%;
-  font-size: 12px;
+  	height:100%;
+  	font-size: 12px;
 }
 form{
-	width:100%;
-	
+	width:100%;		
 	padding:0;
-	margin:0;
-	
+	margin:0;	
 }
 ul{
-	list-style-type:none;
-	
+	list-style-type:none;	
 }
 img{
-	border:none;
-	
+	border:none;	
 }
 input{
 	font-size:12px;

@@ -156,8 +156,8 @@
 					<%for( var i = (pageNo-1)*count ; i < pageNo*count ; i ++){%>
 						<%if(i<sum){%>
 							<tr>
-								<td align="center">
-									<input type="checkbox"  name="pro_num"/><%=list[i].pro_name%>
+								<td align="center">									
+									<input type="checkbox"  name="pro_num"/><%=list.length-i%>
 								</td>
 								<td class="first-cell" align="center">
 									<span><%=list[i].goods_name%></span>
@@ -169,16 +169,32 @@
 									<span><%=list[i].shop_price%></span>
 								</td>
 								<td align="center">
-									<img src="imgs/yes.gif" alt="" />
+									<%if(list[i].grounding=="1"){%>
+										<img src="imgs/yes.gif" alt="" />
+									<%}else{%>
+										<img src="imgs/no.gif" alt="" />
+									<%}%>
 								</td>
 								<td align="center">
-									<img src="imgs/yes.gif" alt="" />
+									<%if(list[i].supreme_pro=="1"){%>
+										<img src="imgs/yes.gif" alt="" />
+									<%}else{%>
+										<img src="imgs/no.gif" alt="" />
+									<%}%>
 								</td>
 								<td align="center">
-									<img src="imgs/yes.gif" alt="" />
+									<%if(list[i].new_pro=="1"){%>
+										<img src="imgs/yes.gif" alt="" />
+									<%}else{%>
+										<img src="imgs/no.gif" alt="" />
+									<%}%>
 								</td>
 								<td align="center">
-									<img src="imgs/yes.gif" alt="" />
+									<%if(list[i].hot_pro=="1"){%>
+										<img src="imgs/yes.gif" alt="" />
+									<%}else{%>
+										<img src="imgs/no.gif" alt="" />
+									<%}%>
 								</td>
 								<td align="center">
 									<span>100</span>
@@ -193,7 +209,7 @@
 									<a href="">
 										<img src="imgs/icon_view.gif" width="21" height="21" border="0" alt="" />
 									</a>
-									<a href="http://localhost:8080/goods_add">
+									<a href="">
 										<img src="imgs/icon_edit.gif" width="21" height="21" border="0" alt="" />
 									</a>
 									<a href="">

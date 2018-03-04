@@ -4,48 +4,48 @@
 	<meta charset="UTF-8" />
 	<title>ECSHOP管理中心</title>	
 	<script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
-	<link rel="stylesheet" href="/stylesheets/login.css" />
 	<link rel="stylesheet" href="/stylesheets/style.css" />
+	<link rel="stylesheet" href="/stylesheets/login.css" />
 </head>
-<body style="height:100%;padding:0">
-	<form id="frm" class="login-body" action="/admin" method="post">
-		<div class="login-hd">
-			<img src="/imgs/shopex.png" alt="" class="logo"/>
-		</div>
-		<div class="center-wrap">
-			<div class="login-center">
-				<div class="bd-logo">
-					<img src="imgs/ecshop-logo.png" width="373" height="103" border="0" alt="" />
-				</div>
-			</div>
-			<div class="login-main">
-				<div  class="login-show">
-					<h3 class="show-hd"></h3>
-					<div class="controls first">						
-						<i class="icon iconfont">&#xe697;</i>
-						<input type="text" name="username" id="username" placeholder="用户名"/>
-					</div>
-					<div class="controls second">						
-						<i class="icon iconfont">&#xe6e6;</i>
-						<input type="text" name="password" id="psw" placeholder="密码"/>
-					</div>
-					<div class="controls third">						
-						<i class="icon iconfont">&#xe624;</i>
-						<input type="text" name="captcha" placeholder="验证码"/>
-					</div>
-					<div class="controls last">						
-						<input type="botton" onclick="submit()" class="btn" value="登录"/>
-					</div>
-					<div class="controls bside" style="border:none">
-						<input type="checkbox" value="1" name="remember" id="remember"/>
-						<label for="remember">保存登录信息</label>
-						<a href="" class="link-forget link">忘记密码？</a>
-						<a href="" class="link-home link">去店铺首页>></a>
+<body style="height:100%;padding:0;">	
+	<form id="frm" class="login-body" action="/admin" method="post">		
+			<div class="login-hd">
+				<img src="/imgs/shopex.png" alt="" class="logo"/>
+			</div>				
+			<div class="center-wrap">
+				<div class="login-center">
+					<div class="bd-logo">
+						<img src="imgs/ecshop-logo.png" width="373" height="103" border="0" alt="" />
 					</div>
 				</div>
-			</div>
-		</div>		
-	</form>
+				<div class="login-main">
+					<div  class="login-show">
+						<h3 class="show-hd"></h3>
+						<div class="controls first">						
+							<i class="icon iconfont">&#xe697;</i>
+							<input type="text" name="username" id="username" placeholder="用户名"/>
+						</div>
+						<div class="controls second">						
+							<i class="icon iconfont">&#xe6e6;</i>
+							<input type="text" name="password" id="psw" placeholder="密码"/>
+						</div>
+						<div class="controls third">						
+							<i class="icon iconfont">&#xe624;</i>
+							<input type="text" name="captcha" placeholder="验证码"/>
+						</div>
+						<div class="controls last">						
+							<input type="botton" onclick="submit()" class="btn" value="登录"/>
+						</div>
+						<div class="controls bside" style="border:none">
+							<input type="checkbox" value="1" name="remember" id="remember"/>
+							<label for="remember">保存登录信息</label>
+							<a href="" class="link-forget link">忘记密码？</a>
+							<a href="" class="link-home link">去店铺首页>></a>
+						</div>
+					</div>
+				</div>			
+			</div>						
+	</form>		
 </body>
 <script>
 	function submit(){

@@ -13,8 +13,8 @@ router.get('/admin',function(req,res){
 router.get('/goods_add',function(req,res){
 	res.render('goods_add');
 })
-router.get('/control',function(req,res){
-	res.render('control');
+router.get('/control',function(req,res){			
+		res.render('control');	
 })
 router.get('/api/goods_del',function(req,res){
 	console.log(11111);
@@ -61,12 +61,16 @@ router.get('/list',function(req,res){
 router.get('/goods_list',function(req,res){	
 	var Form = new multiparty.Form();
 	Form.parse(req,function(err,body,files){
-		var goods_name = req.query.goods_name[0];
+		console.log(req.query);
+		var goods_name = req.query.goods_name;
 		var goods_sn = req.query.goods_sn[0];
-		var shop_price = req.query.shop_price[0];
-		var goods_number = req.query.goods_number[0];
-		var vertual_sales = req.query.vertual_sales[0];	
-		
+		var shop_price = req.query.shop_price;
+		var goods_number = req.query.goods_number;
+		var vertual_sales = req.query.vertual_sales;	
+		var supreme_pro = req.query.supreme_pro;
+		var new_pro = req.query.new_pro;
+		var hot_pro = req.query.hot_pro;
+		var grounding = req.query.grounding;
 //		var imgName = files.img[0].path;
 //		imgName = imgName.substr(imgName.lastIndexOf("\\")+1);
 		var gm = new GoodsModel();
@@ -74,12 +78,16 @@ router.get('/goods_list',function(req,res){
 		gm.shop_price = shop_price;
 		gm.goods_sn = goods_sn;
 		gm.goods_number = goods_number;
-		gm.vertual_sales = vertual_sales;			
+		gm.vertual_sales = vertual_sales;		
+		gm.supreme_pro = supreme_pro;
+		gm.hot_pro = hot_pro;
+		gm.new_pro = new_pro;
+		gm.grounding = grounding;
 //		gm.img = imgName;
 		gm.save(function(err){
 			if(!err){
 				res.send("商品保存成功");
-			}else{
+			}else{				
 				res.send("商品保存失败");
 			}
 		})
